@@ -1,0 +1,2733 @@
+{
+  "hairdresser": [
+    {
+      "type": "node",
+      "id": 1420033886,
+      "lat": -1.2795197,
+      "lon": 36.8130013,
+      "tags": {
+        "name": "YMCA SAMSAN SALON",
+        "shop": "hairdresser"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5559348157,
+      "lat": -1.2914657,
+      "lon": 36.7830783,
+      "tags": {
+        "name": "Borderless Barbershop and Salon",
+        "name:it": "Borderless",
+        "shop": "hairdresser"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10566929710,
+      "lat": -1.2952842,
+      "lon": 36.7977671,
+      "tags": {
+        "check_date": "2023-05-11",
+        "name": "Westside hurlingham Barbers",
+        "shop": "hairdresser"
+      }
+    }
+  ],
+  "salon": [
+    {
+      "type": "node",
+      "id": 5361293325,
+      "lat": -1.2895623,
+      "lon": 36.7864428,
+      "tags": {
+        "addr:housenumber": "Lenana Rd, Nairobi",
+        "check_date": "2023-05-11",
+        "name": "Posh Palace Hair Studio & Spa",
+        "phone": "0797403131",
+        "shop": "beauty"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414007499,
+      "lat": -1.2945232,
+      "lon": 36.7913926,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Marcus Garvey Road",
+        "check_date": "2023-04-25",
+        "name": "Oasis Spa Point",
+        "shop": "beauty"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5440487419,
+      "lat": -1.2886114,
+      "lon": 36.7857659,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Ring Road Kilimani",
+        "name": "Artistry Salon & Spa",
+        "name:it": "Artistry",
+        "shop": "beauty"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9722395619,
+      "lat": -1.2913786,
+      "lon": 36.7830755,
+      "tags": {
+        "addr:street": "Galana Road",
+        "name": "Alexiz Naturel Salon & Spa",
+        "phone": "0742550497",
+        "shop": "beauty"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9722395620,
+      "lat": -1.2915158,
+      "lon": 36.7830564,
+      "tags": {
+        "name": "MasterCraft Barbershop",
+        "phone": "0741565053",
+        "shop": "beauty"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10566929712,
+      "lat": -1.295659,
+      "lon": 36.7976716,
+      "tags": {
+        "check_date": "2023-05-11",
+        "name": "Merielylne Beauty",
+        "shop": "beauty"
+      }
+    }
+  ],
+  "restaurant": [
+    {
+      "type": "node",
+      "id": 30088423,
+      "lat": -1.2923537,
+      "lon": 36.8062511,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housenumber": "First Floor,Chancery Building,Valley Rd, Nairobi",
+        "addr:street": "Valley Road",
+        "amenity": "restaurant",
+        "name": "China Plate"
+      }
+    },
+    {
+      "type": "node",
+      "id": 30210243,
+      "lat": -1.294902,
+      "lon": 36.7996806,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "The Blues"
+      }
+    },
+    {
+      "type": "node",
+      "id": 30210244,
+      "lat": -1.2949839,
+      "lon": 36.7981018,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Argwings Kodhek Road",
+        "amenity": "restaurant",
+        "check_date": "2023-05-11",
+        "cuisine": "chinese",
+        "name": "Shanghai Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 30210293,
+      "lat": -1.293115,
+      "lon": 36.7933716,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Argwings Kodhek Road",
+        "amenity": "restaurant",
+        "cuisine": "chinese",
+        "name": "New Beijing Restaurant",
+        "name:zh": "\u5170\u5dde\u62c9\u9762"
+      }
+    },
+    {
+      "type": "node",
+      "id": 30215021,
+      "lat": -1.2829298,
+      "lon": 36.8159604,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Habesha II Ethiopian"
+      }
+    },
+    {
+      "type": "node",
+      "id": 30695695,
+      "lat": -1.2855082,
+      "lon": 36.8134256,
+      "tags": {
+        "amenity": "restaurant",
+        "created_by": "JOSM",
+        "name": "YWCA"
+      }
+    },
+    {
+      "type": "node",
+      "id": 255660901,
+      "lat": -1.2889249,
+      "lon": 36.7900038,
+      "tags": {
+        "amenity": "restaurant",
+        "check_date": "2023-05-11",
+        "cuisine": "italian",
+        "name": "Osteria del Chianti"
+      }
+    },
+    {
+      "type": "node",
+      "id": 255682373,
+      "lat": -1.2887897,
+      "lon": 36.790909,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housenumber": "APT B7",
+        "addr:street": "Lenana Road",
+        "amenity": "restaurant",
+        "check_date": "2023-04-25",
+        "cuisine": "lebanese",
+        "name": "Cedars Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 255683130,
+      "lat": -1.2856126,
+      "lon": 36.791729,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Maalim Juma Road",
+        "amenity": "restaurant",
+        "check_date": "2023-05-11",
+        "name": "Q Lounge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 315205740,
+      "lat": -1.2922001,
+      "lon": 36.782942,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Argwings Kodhek Road",
+        "amenity": "restaurant",
+        "name": "Diners Gardens"
+      }
+    },
+    {
+      "type": "node",
+      "id": 323106965,
+      "lat": -1.2893296,
+      "lon": 36.7883178,
+      "tags": {
+        "amenity": "restaurant",
+        "description": "Japanese",
+        "name": "Misono"
+      }
+    },
+    {
+      "type": "node",
+      "id": 571733403,
+      "lat": -1.2957893,
+      "lon": 36.8071943,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housenumber": "Upper Hill,General Accident Building, Ralph Bunche Road, Nairobi",
+        "addr:street": "Ralph Bunche Road",
+        "amenity": "restaurant",
+        "name": "Savannah Upper Hill"
+      }
+    },
+    {
+      "type": "node",
+      "id": 771252811,
+      "lat": -1.2991259,
+      "lon": 36.791691,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "The Agenda"
+      }
+    },
+    {
+      "type": "node",
+      "id": 842042537,
+      "lat": -1.2949522,
+      "lon": 36.7970213,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Argwings Kodhek Road",
+        "amenity": "restaurant",
+        "check_date": "2023-05-11",
+        "name": "Tamasha Hurlingham"
+      }
+    },
+    {
+      "type": "node",
+      "id": 968548361,
+      "lat": -1.2837839,
+      "lon": 36.8178078,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housenumber": "Sasini House,",
+        "addr:street": "Loita Street",
+        "amenity": "restaurant",
+        "check_date": "2024-09-05",
+        "name": "Savannah",
+        "payment:cash": "no",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1333619849,
+      "lat": -1.2896044,
+      "lon": 36.8039737,
+      "tags": {
+        "amenity": "restaurant",
+        "check_date": "2023-05-11",
+        "name": "Amaica Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1333644474,
+      "lat": -1.290839,
+      "lon": 36.8049388,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housenumber": "P.O. Box 34877. Kedong House,",
+        "addr:street": "Lenana Road",
+        "amenity": "restaurant",
+        "name": "Slims Restaurant",
+        "opening_hours": "24/7"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1333669394,
+      "lat": -1.2899904,
+      "lon": 36.8003077,
+      "tags": {
+        "amenity": "restaurant",
+        "check_date": "2023-05-11",
+        "name": "Lenana Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1333669419,
+      "lat": -1.2897204,
+      "lon": 36.8004228,
+      "tags": {
+        "amenity": "restaurant",
+        "check_date": "2023-05-11",
+        "name": "Lower Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1333670146,
+      "lat": -1.2917346,
+      "lon": 36.795884,
+      "tags": {
+        "amenity": "restaurant",
+        "check_date": "2023-05-12",
+        "name": "Checkers inn Bar & restaurant",
+        "not:brand:wikidata": "Q3419341"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1418962720,
+      "lat": -1.2799436,
+      "lon": 36.8126726,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "ymca restaraunt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1420048724,
+      "lat": -1.2807028,
+      "lon": 36.8133758,
+      "tags": {
+        "amenity": "restaurant",
+        "check_date": "2023-05-11",
+        "cuisine": "african",
+        "name": "United Kenya Club",
+        "operator": "United Kenya Club",
+        "outdoor_seating": "yes",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1764202913,
+      "lat": -1.2855785,
+      "lon": 36.7863582,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Dennis Pritt Road",
+        "amenity": "restaurant",
+        "check_date": "2023-05-11",
+        "name": "Gracia Gardens",
+        "place": "locality"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2818439701,
+      "lat": -1.288543,
+      "lon": 36.803255,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Local Food. Not Fancy."
+      }
+    },
+    {
+      "type": "node",
+      "id": 2849789428,
+      "lat": -1.2882567,
+      "lon": 36.8028638,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Local Food"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2849789429,
+      "lat": -1.2889516,
+      "lon": 36.8025458,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Local Food"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2991405453,
+      "lat": -1.2755591,
+      "lon": 36.7889255,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Kandara Road",
+        "amenity": "restaurant",
+        "name": "Viva Lounge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3776166740,
+      "lat": -1.2884017,
+      "lon": 36.7899739,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:postcode": "P. O. Box 4289 Lenana Rd, Nairobi City",
+        "addr:street": "Nyangumi Road",
+        "amenity": "restaurant",
+        "cuisine": "italian",
+        "name": "Casablanca"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3996188572,
+      "lat": -1.2948261,
+      "lon": 36.7999469,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Kula Korner"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4075648759,
+      "lat": -1.2947784,
+      "lon": 36.7872703,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housenumber": "Adlife Plaza, P.o. Box 69671 - 00400,",
+        "addr:street": "Ring Road",
+        "amenity": "restaurant",
+        "capacity": "150",
+        "cuisine": "american",
+        "delivery": "no",
+        "level": "1",
+        "name": "Newscafe - Adlife (Kilimani)",
+        "opening_hours": "0700-2300",
+        "smoking": "outside",
+        "takeaway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4075662155,
+      "lat": -1.2948368,
+      "lon": 36.7872865,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housenumber": "Adlife Plaza",
+        "addr:street": "Ring Road",
+        "amenity": "restaurant",
+        "capacity": "100",
+        "check_date": "2023-04-18",
+        "cuisine": "burger",
+        "delivery": "yes",
+        "level": "0",
+        "name": "Big Square",
+        "opening_hours": "0900-2200",
+        "smoking": "no",
+        "takeaway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4405710393,
+      "lat": -1.286018,
+      "lon": 36.8198548,
+      "tags": {
+        "addr:street": "Koinage Street",
+        "amenity": "restaurant",
+        "name": "K&A Coffee House & Cafeteria",
+        "name:en": "K&A Coffee House & Cafeteria"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4406454891,
+      "lat": -1.2742354,
+      "lon": 36.7888224,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Mandera Road",
+        "amenity": "restaurant",
+        "name": "Tulip's",
+        "name:en": "Tulip's"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4516528589,
+      "lat": -1.2889476,
+      "lon": 36.8040487,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Milimani Road",
+        "amenity": "restaurant",
+        "check_date": "2023-04-15",
+        "name": "Nyama Choma Paradise",
+        "name:en": "Nyama Choma Paradise"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4592077893,
+      "lat": -1.2970463,
+      "lon": 36.8024915,
+      "tags": {
+        "amenity": "restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4772237778,
+      "lat": -1.293612,
+      "lon": 36.7950745,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Argwings Kodhek Road",
+        "amenity": "restaurant",
+        "cuisine": "regional",
+        "delivery": "no",
+        "name": "Pablo's",
+        "outdoor_seating": "yes",
+        "smoking": "outside",
+        "takeaway": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4923541341,
+      "lat": -1.2943488,
+      "lon": 36.7990948,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Woodlands Lane",
+        "amenity": "restaurant",
+        "name": "Nook"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4966765923,
+      "lat": -1.2934686,
+      "lon": 36.785158,
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "indian;caribbean",
+        "name": "Caribbean",
+        "name:en": "Caribbean"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5003136023,
+      "lat": -1.2868425,
+      "lon": 36.8199915,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Cardinal Otunga Street",
+        "amenity": "restaurant",
+        "cuisine": "african;cake;coffee_shop",
+        "name": "89 Eateries",
+        "name:en": "89 Eateries"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5254474221,
+      "lat": -1.2907703,
+      "lon": 36.7827542,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Galana Road",
+        "amenity": "restaurant",
+        "name": "Fogo Gaucho"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5328528781,
+      "lat": -1.2975822,
+      "lon": 36.7911663,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Kindaruma Road",
+        "amenity": "restaurant",
+        "check_date": "2023-04-25",
+        "name": "Soiree Gardens Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5339160677,
+      "lat": -1.2706857,
+      "lon": 36.7931233,
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "chinese;japanese;korean",
+        "name": "Chengdu Impression",
+        "name:zh": "\u6210\u90fd\u996d\u5e97"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5339200167,
+      "lat": -1.2705563,
+      "lon": 36.7984216,
+      "tags": {
+        "amenity": "restaurant",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "internet_access:ssid": "POTS&PALMS",
+        "name": "Pots And Palms"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5339209653,
+      "lat": -1.2735736,
+      "lon": 36.7940306,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Laikipia Cottages"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5339220442,
+      "lat": -1.2761391,
+      "lon": 36.7918972,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Kandara Road",
+        "amenity": "restaurant",
+        "name": "Java Rosslyn Riviera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5339224752,
+      "lat": -1.2761213,
+      "lon": 36.7877876,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Kandara Road",
+        "amenity": "restaurant",
+        "name": "Solar Garden"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5339224753,
+      "lat": -1.2798703,
+      "lon": 36.7835011,
+      "tags": {
+        "amenity": "restaurant",
+        "check_date": "2023-04-18",
+        "name": "Swadish Gardens"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5339317386,
+      "lat": -1.2714378,
+      "lon": 36.8018311,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Riverside Westlands Lane",
+        "amenity": "restaurant",
+        "cuisine": "international",
+        "diet:chicken": "yes",
+        "diet:vegetarian": "yes",
+        "name": "Amani ya Juu"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5339427767,
+      "lat": -1.2737035,
+      "lon": 36.8118563,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Treehouse"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5339427768,
+      "lat": -1.2735587,
+      "lon": 36.8128083,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Ebony Lounge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5340504521,
+      "lat": -1.2913329,
+      "lon": 36.7856058,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:postcode": "00100",
+        "addr:street": "Wood Avenue",
+        "amenity": "restaurant",
+        "name": "Yejoka Gardens",
+        "phone": "+254 722 333750"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5341078558,
+      "lat": -1.2703746,
+      "lon": 36.8156625,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Prof. Wangari Mathai Road",
+        "amenity": "restaurant",
+        "name": "Appletinni Bar & Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5341078560,
+      "lat": -1.2703249,
+      "lon": 36.8161401,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Prof. Wangari Mathai Road",
+        "amenity": "restaurant",
+        "cuisine": "chinese",
+        "name": "Mister Wok - Parklands"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5353024597,
+      "lat": -1.2713017,
+      "lon": 36.8089634,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Chiromo Lane",
+        "amenity": "restaurant",
+        "name": "Lucca Restaurant, Villa Rosa Kempinski"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5353026687,
+      "lat": -1.2714187,
+      "lon": 36.808746,
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "lebanese",
+        "name": "Tambourin"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5353026688,
+      "lat": -1.2716595,
+      "lon": 36.8089568,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housenumber": "Villa Rosa Kempinski, Westlands, 69671 - 00400, Nairobi",
+        "addr:street": "Waiyaki Way",
+        "amenity": "restaurant",
+        "name": "Cafe Villa Rosa"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5378425141,
+      "lat": -1.2849401,
+      "lon": 36.7931569,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:postcode": "00100",
+        "addr:street": "Denis Pritt Road",
+        "amenity": "restaurant",
+        "name": "Road House Grill Kilimani",
+        "website": "https://roadhouse.co.ke/"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5378545307,
+      "lat": -1.2962663,
+      "lon": 36.8111871,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housenumber": "Chyulu Rd, Nairobi",
+        "addr:street": "Chyulu Road",
+        "amenity": "restaurant",
+        "name": "Meladen Bar and Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5380534545,
+      "lat": -1.2992635,
+      "lon": 36.811724,
+      "tags": {
+        "addr:city": "Nairobi City",
+        "addr:street": "Mara Road",
+        "amenity": "restaurant",
+        "name": "Upperhill Springs Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5383781979,
+      "lat": -1.2954103,
+      "lon": 36.8160245,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Upper Hill Road",
+        "amenity": "restaurant",
+        "name": "BHB"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5383781993,
+      "lat": -1.2891622,
+      "lon": 36.8141608,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housenumber": "Jumuai Coffee House located Inside All Saints Cathderal Compound, Kenyatta Ave, Nairobi",
+        "addr:street": "Kenyatta Avenue",
+        "amenity": "restaurant",
+        "check_date": "2023-04-15",
+        "name": "Jumuia Coffee House"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5383793222,
+      "lat": -1.2900093,
+      "lon": 36.811585,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housenumber": "NSSF Building, P. O. Box 61284, Nairobi",
+        "addr:street": "Ngong Road",
+        "amenity": "restaurant",
+        "check_date": "2023-05-11",
+        "name": "La Contessa Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5383793281,
+      "lat": -1.2953166,
+      "lon": 36.8060699,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Argwings Kodhek Road",
+        "amenity": "restaurant",
+        "check_date": "2023-05-11",
+        "cuisine": "chinese",
+        "name": "Harbin Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5383793282,
+      "lat": -1.2953043,
+      "lon": 36.806264,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Argwings Kodhek Road",
+        "amenity": "restaurant",
+        "cuisine": "italian",
+        "name": "Tupelo Restaurant- African & Continental Dishes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5412286201,
+      "lat": -1.2991721,
+      "lon": 36.7839618,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housenumber": "Kilimani Estate, 70410 - 00400,",
+        "addr:street": "Kilimani Road",
+        "amenity": "restaurant",
+        "name": "BLVCK Lounge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5412286202,
+      "lat": -1.2994451,
+      "lon": 36.7843272,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Ngong Road",
+        "amenity": "restaurant",
+        "name": "The Cave"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414007497,
+      "lat": -1.2944252,
+      "lon": 36.7911984,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Marcus Garvey Road",
+        "amenity": "restaurant",
+        "check_date": "2023-04-25",
+        "name": "Mama Oliech Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414007498,
+      "lat": -1.2942425,
+      "lon": 36.7913157,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Marcus Garvey Road",
+        "amenity": "restaurant",
+        "check_date": "2023-04-25",
+        "name": "Han Di Yuan Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414007500,
+      "lat": -1.2947232,
+      "lon": 36.7912792,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Marcus Garvey Road",
+        "amenity": "restaurant",
+        "name": "Lalls Take Away"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414007501,
+      "lat": -1.2948866,
+      "lon": 36.7913099,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Chania Avenue",
+        "amenity": "restaurant",
+        "cuisine": "chinese",
+        "name": "Food Basket",
+        "name:zh": "\u83dc\u7bee\u5b50"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414008444,
+      "lat": -1.2982473,
+      "lon": 36.7904965,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "George Padmore Lane",
+        "amenity": "restaurant",
+        "check_date": "2023-04-25",
+        "name": "Lucie Cafe and Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414008445,
+      "lat": -1.2980435,
+      "lon": 36.7897753,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housenumber": "L.R 1/442",
+        "addr:street": "Kindaruma Road",
+        "amenity": "restaurant",
+        "name": "Chateau Rouge",
+        "phone": "+254 722 240630"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414008446,
+      "lat": -1.2980819,
+      "lon": 36.7892157,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Kindaruma Road",
+        "amenity": "restaurant",
+        "name": "Cakes.co.ke"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414008507,
+      "lat": -1.2988031,
+      "lon": 36.7845939,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Menelik Road",
+        "amenity": "restaurant",
+        "name": "Menelik House"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414008554,
+      "lat": -1.2989298,
+      "lon": 36.7864927,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Ngong Road",
+        "amenity": "restaurant",
+        "check_date": "2023-04-15",
+        "name": "Space Lounge Bar & Grill"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414008566,
+      "lat": -1.2990461,
+      "lon": 36.7869695,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housenumber": "Caf\u00e9 Tal",
+        "addr:street": "Ngong Road",
+        "amenity": "restaurant",
+        "name": "Caf\u00e9 Tal"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414200464,
+      "lat": -1.2997581,
+      "lon": 36.7919678,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Ngong Road",
+        "amenity": "restaurant",
+        "check_date": "2023-05-11",
+        "name": "Arts & Soul Lounge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414200488,
+      "lat": -1.2978288,
+      "lon": 36.7942272,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housenumber": "1",
+        "addr:street": "Kindaruma Road",
+        "amenity": "restaurant",
+        "name": "Ashaki Grill"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414200494,
+      "lat": -1.2958763,
+      "lon": 36.7998734,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housenumber": "After Shell,",
+        "addr:street": "Argwings Kodhek Road",
+        "amenity": "restaurant",
+        "check_date": "2023-05-02",
+        "cuisine": "chinese",
+        "name": "Chinese hotel"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414200505,
+      "lat": -1.2955372,
+      "lon": 36.7987698,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Argwings Kodhek Road",
+        "amenity": "restaurant",
+        "check_date": "2023-05-02",
+        "name": "Kyheo Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414200512,
+      "lat": -1.2952324,
+      "lon": 36.7980541,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Argwings Kodhek Road",
+        "amenity": "restaurant",
+        "cuisine": "seafood",
+        "name": "Seafood Center"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414201174,
+      "lat": -1.2959759,
+      "lon": 36.7951668,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "George Padmore Road",
+        "amenity": "restaurant",
+        "check_date": "2023-05-11",
+        "cuisine": "indian",
+        "name": "Saffron Indian Kitchen"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414201184,
+      "lat": -1.2939319,
+      "lon": 36.7935937,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Argwings Kodhek Road",
+        "amenity": "restaurant",
+        "cuisine": "ETHIPOIAN",
+        "name": "Ethiopian Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414201189,
+      "lat": -1.2942592,
+      "lon": 36.7937284,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Argwings Kodhek Road",
+        "amenity": "restaurant",
+        "name": "Yedil Cafe & Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414201210,
+      "lat": -1.2939432,
+      "lon": 36.7928578,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Batians Lane",
+        "amenity": "restaurant",
+        "name": "Sa'ani African Bistro"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414201222,
+      "lat": -1.2960507,
+      "lon": 36.7933628,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Robin Lane",
+        "amenity": "restaurant",
+        "name": "Dejina Smart Village Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414201227,
+      "lat": -1.2950577,
+      "lon": 36.7907928,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Chania Avenue",
+        "amenity": "restaurant",
+        "check_date": "2023-05-23",
+        "name": "Pete's Coffee Chania"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414248194,
+      "lat": -1.2892279,
+      "lon": 36.783367,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Galana Road",
+        "amenity": "restaurant",
+        "name": "Ankole Grill",
+        "outdoor_seating": "yes",
+        "phone": "+254 710 20 20 20",
+        "website": "https://ankole.co.ke/"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414280544,
+      "lat": -1.2927625,
+      "lon": 36.7877393,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housenumber": "Yaya Centre,",
+        "addr:street": "Argwings Kodhek Road",
+        "amenity": "restaurant",
+        "brand": "Pizza Hut",
+        "brand:wikidata": "Q191615",
+        "check_date": "2023-05-11",
+        "cuisine": "pizza",
+        "name": "Pizza Hut"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414280545,
+      "lat": -1.2929447,
+      "lon": 36.7877345,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housenumber": "Yaya Centre,",
+        "addr:street": "Argwings Kodhek Road",
+        "amenity": "restaurant",
+        "check_date": "2023-05-11",
+        "cuisine": "chinese",
+        "name": "Chinese Kitchen & Dim Sum House"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414280548,
+      "lat": -1.2929258,
+      "lon": 36.787933,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Argwings Kodhek Road",
+        "amenity": "restaurant",
+        "name": "Dorman's Cafe"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414280551,
+      "lat": -1.292837,
+      "lon": 36.7876523,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Argwings Kodhek Road",
+        "amenity": "restaurant",
+        "check_date": "2023-05-11",
+        "name": "Nyama Mama Xpress"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414280552,
+      "lat": -1.2929412,
+      "lon": 36.7878439,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housenumber": "Yaya Centre,",
+        "addr:street": "Argwings Kodhek Road",
+        "amenity": "restaurant",
+        "name": "Artcaffe Yaya"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414280553,
+      "lat": -1.293062,
+      "lon": 36.7875645,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Ring Road",
+        "amenity": "restaurant",
+        "name": "Alexandre Choclatier"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414280554,
+      "lat": -1.2933999,
+      "lon": 36.7877476,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Argwings Kodhek Road",
+        "amenity": "restaurant",
+        "check_date": "2023-05-11",
+        "name": "Minar Restaurant Ltd"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414280560,
+      "lat": -1.2930824,
+      "lon": 36.7879029,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Argwings Kodhek Road",
+        "amenity": "restaurant",
+        "name": "Absolute Juice"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414280566,
+      "lat": -1.2945581,
+      "lon": 36.7871642,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housenumber": "Adlife Plaza,",
+        "addr:street": "Ring Road Kilimani",
+        "amenity": "restaurant",
+        "name": "KAI Sushi Bar Nairobi",
+        "name:it": "Kai Sushi Bar"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414280567,
+      "lat": -1.294897,
+      "lon": 36.7871832,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Chania Avenue",
+        "amenity": "restaurant",
+        "name": "Kivirio Desserts"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414280568,
+      "lat": -1.2948321,
+      "lon": 36.7879466,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Chania Avenue",
+        "amenity": "restaurant",
+        "name": "Rubycut"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414280585,
+      "lat": -1.2934846,
+      "lon": 36.7859257,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Wood Avenue",
+        "amenity": "restaurant",
+        "name": "Peppermint Grove"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414335598,
+      "lat": -1.2923208,
+      "lon": 36.7906043,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Chaka Road",
+        "amenity": "restaurant",
+        "check_date": "2023-04-25",
+        "name": "Mohni Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414335599,
+      "lat": -1.2925503,
+      "lon": 36.790693,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Chaka Road",
+        "amenity": "restaurant",
+        "check_date": "2023-04-25",
+        "name": "The Future Lounge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414335602,
+      "lat": -1.2922113,
+      "lon": 36.7922139,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Jabavu Road",
+        "amenity": "restaurant",
+        "check_date": "2023-05-11",
+        "name": "Capri7 Restaurant & Bar"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414335608,
+      "lat": -1.2927538,
+      "lon": 36.7919165,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Argwings Kodhek Road",
+        "amenity": "restaurant",
+        "name": "Chicken Roost"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414335609,
+      "lat": -1.2929572,
+      "lon": 36.7920209,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Argwings Kodhek Road",
+        "amenity": "restaurant",
+        "cuisine": "chinese",
+        "name": "Chinese Dumpling House"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414335610,
+      "lat": -1.2927825,
+      "lon": 36.7923861,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Argwings Kodhek Road",
+        "amenity": "restaurant",
+        "name": "Silk Noodles"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414335617,
+      "lat": -1.2922113,
+      "lon": 36.7951698,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Jabavu Road",
+        "amenity": "restaurant",
+        "cuisine": "chinese",
+        "name": "Jingling Chinese Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414335723,
+      "lat": -1.2938753,
+      "lon": 36.7989605,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Woodlands Lane",
+        "amenity": "restaurant",
+        "check_date": "2023-05-02",
+        "name": "ANPA Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414335735,
+      "lat": -1.2946343,
+      "lon": 36.7992448,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Argwings Kodhek Road",
+        "amenity": "restaurant",
+        "check_date": "2023-05-02",
+        "cuisine": "chinese",
+        "name": "Chopstix Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414335736,
+      "lat": -1.2947438,
+      "lon": 36.7996909,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Argwings Kodhek Road",
+        "amenity": "restaurant",
+        "name": "Mc Fry's-Hurlingham"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414335737,
+      "lat": -1.2946604,
+      "lon": 36.7998918,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Argwings Kodhek Road",
+        "amenity": "restaurant",
+        "name": "The Shirpa"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5428924102,
+      "lat": -1.2918624,
+      "lon": 36.7908057,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:postcode": "00100",
+        "addr:street": "Chaka Road",
+        "alt_name": "G Spot Bar",
+        "amenity": "restaurant",
+        "check_date": "2023-05-11",
+        "cuisine": "regional",
+        "name": "Golden Spot Bar & Restaurant",
+        "outdoor_seating": "yes",
+        "phone": "+254 718112432"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5440487408,
+      "lat": -1.2878123,
+      "lon": 36.7877829,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Cotton Avenue",
+        "amenity": "restaurant",
+        "check_date": "2023-05-11",
+        "cuisine": "chinese",
+        "name": "Guangdong Hotel",
+        "name:zh": "\u7ca4\u6d77\u9152\u5e97"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5440487409,
+      "lat": -1.2870561,
+      "lon": 36.7869783,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Kayahwe Road",
+        "amenity": "restaurant",
+        "check_date": "2023-05-11",
+        "cuisine": "chinese",
+        "name": "Yue Hai Restaurant",
+        "opening_hours": "11:00-23:00"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5440487418,
+      "lat": -1.2879732,
+      "lon": 36.7862058,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Ring Road Kilimani",
+        "amenity": "restaurant",
+        "check_date": "2023-04-15",
+        "name": "O'Sinkirri Restaurant",
+        "opening_hours": "\"restrictive\""
+      }
+    },
+    {
+      "type": "node",
+      "id": 5440491022,
+      "lat": -1.290333,
+      "lon": 36.7872894,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Ring Road Kilimani",
+        "amenity": "restaurant",
+        "check_date": "2023-04-18",
+        "name": "Abyssinia Exotic Restaurant",
+        "name:it": "Abyssinia Exotic"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5440491040,
+      "lat": -1.2862141,
+      "lon": 36.7839259,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Dennis Pritt Road",
+        "amenity": "restaurant",
+        "name": "Dennis Pritt Lounge",
+        "phone": "+254 721 524 360"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5440491077,
+      "lat": -1.292843,
+      "lon": 36.7815046,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Kirichwa Road",
+        "amenity": "restaurant",
+        "name": "Garden Fresh Dishes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5440538412,
+      "lat": -1.2724185,
+      "lon": 36.7934237,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Laikipia Road",
+        "amenity": "restaurant",
+        "name": "Argenti Restaurant and Lounge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5456668214,
+      "lat": -1.2887111,
+      "lon": 36.7922065,
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "indian",
+        "name": "Grand cafe & Indian cuisine"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5456668219,
+      "lat": -1.2851486,
+      "lon": 36.7915978,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Dennis Pritt Road",
+        "amenity": "restaurant",
+        "check_date": "2023-05-11",
+        "name": "Dambusters Hurlingham"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5456668630,
+      "lat": -1.2909999,
+      "lon": 36.7929151,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Kasuku Lane",
+        "amenity": "restaurant",
+        "name": "The Hood"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5536006828,
+      "lat": -1.2833448,
+      "lon": 36.8175325,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Loita Street",
+        "amenity": "restaurant",
+        "cuisine": "chinese",
+        "name": "Jia Yuan Shi Fu Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5552251968,
+      "lat": -1.2706779,
+      "lon": 36.802947,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housenumber": "14",
+        "addr:street": "Riverside Park",
+        "amenity": "restaurant",
+        "name": "Secret Garden Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5552457015,
+      "lat": -1.2818036,
+      "lon": 36.8180074,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Koinage Street",
+        "amenity": "restaurant",
+        "name": "Sapee Lounge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5552467931,
+      "lat": -1.2829309,
+      "lon": 36.8187888,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Biashara Street",
+        "amenity": "restaurant",
+        "name": "Atasi Cafe"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5552467937,
+      "lat": -1.282995,
+      "lon": 36.818748,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Biashara Street",
+        "amenity": "restaurant",
+        "name": "Valley Coffee Shake Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5555073930,
+      "lat": -1.2852874,
+      "lon": 36.8191294,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Kenyatta Avenue",
+        "amenity": "restaurant",
+        "name": "Bakers Inn"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5555073932,
+      "lat": -1.2845703,
+      "lon": 36.8188731,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housenumber": "Chester House, 3rd Floor,",
+        "addr:postcode": "P. O Box No. 57104, Nairobi",
+        "addr:street": "Koinage Street",
+        "amenity": "restaurant",
+        "name": "Fiesta Restaurants"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5555073933,
+      "lat": -1.2845325,
+      "lon": 36.8193259,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housenumber": "11,",
+        "addr:street": "Koinage Street",
+        "amenity": "restaurant",
+        "name": "Gibsons Coffee"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5555073943,
+      "lat": -1.283925,
+      "lon": 36.8185509,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Koinage Street",
+        "amenity": "restaurant",
+        "name": "Black Forest House"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5555073946,
+      "lat": -1.2844871,
+      "lon": 36.8192768,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housenumber": "11",
+        "addr:street": "Koinage Street",
+        "amenity": "restaurant",
+        "name": "Artlantic cafe"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5555073957,
+      "lat": -1.2819606,
+      "lon": 36.8179432,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Koinage Street",
+        "amenity": "restaurant",
+        "cuisine": "chinese",
+        "name": "Kowloon Garden Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5587461643,
+      "lat": -1.2874422,
+      "lon": 36.7845225,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Dennis Pritt Road",
+        "amenity": "restaurant",
+        "name": "Kilimani",
+        "wikidata": "Q6406937"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5678257734,
+      "lat": -1.2853083,
+      "lon": 36.7900811,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "ORO Restaurant and Lounge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5779838662,
+      "lat": -1.2894579,
+      "lon": 36.7895379,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Lenana Road",
+        "amenity": "restaurant",
+        "name": "Pinotage",
+        "outdoor_seating": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5829975685,
+      "lat": -1.2834993,
+      "lon": 36.8161028,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "RUE104"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5924128087,
+      "lat": -1.2842858,
+      "lon": 36.8192031,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Ammara Africa"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5969605186,
+      "lat": -1.2907063,
+      "lon": 36.8053387,
+      "tags": {
+        "addr:housenumber": "2",
+        "addr:street": "Lenana Road",
+        "amenity": "restaurant",
+        "cuisine": "italian",
+        "email": "osteriamilano18@gmail.com",
+        "internet_access": "wlan",
+        "name": "Osteria Milano",
+        "opening_hours": "Mo-Sa 11:30-02:00",
+        "operator": "Daniel",
+        "phone": "+254757751138"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5969632785,
+      "lat": -1.290931,
+      "lon": 36.8050659,
+      "tags": {
+        "addr:street": "Lenana Road",
+        "amenity": "restaurant",
+        "check_date": "2023-05-11",
+        "cuisine": "italian",
+        "email": "osteramilano18@gmail.com",
+        "internet_access": "wlan",
+        "name": "Osteria Milano",
+        "opening_hours": "Mo-Su 11:30-02:00",
+        "operator": "Daniel",
+        "phone": "+254757751138"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6170453002,
+      "lat": -1.2757517,
+      "lon": 36.7918389,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Kandara Road",
+        "amenity": "restaurant",
+        "name": "Limar Place"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6171147705,
+      "lat": -1.2713539,
+      "lon": 36.8119744,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housenumber": "80",
+        "addr:street": "Muthithi Road",
+        "amenity": "restaurant",
+        "name": "Migwi Farm Limited"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6184419654,
+      "lat": -1.2991308,
+      "lon": 36.7905161,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "George Padmore Lane",
+        "amenity": "restaurant",
+        "name": "Kaikos"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6184425943,
+      "lat": -1.2996772,
+      "lon": 36.78088,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Ngong Road",
+        "amenity": "restaurant",
+        "name": "Valhalla Sports Bar"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6195483186,
+      "lat": -1.2936402,
+      "lon": 36.781938,
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "italian",
+        "name": "Caff\u00e8 Concerto"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6285776988,
+      "lat": -1.282975,
+      "lon": 36.8184321,
+      "tags": {
+        "amenity": "restaurant",
+        "check_date": "2026-05-01",
+        "cuisine": "international",
+        "level": "0",
+        "name": "CJ\u2019s Koinage Street",
+        "opening_hours": "06:00-23:00",
+        "payment:cash": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "toilets": "yes",
+        "website": "https://cjs.co.ke/"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6375755424,
+      "lat": -1.294849,
+      "lon": 36.7970997,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Argwings Kodhek Road",
+        "amenity": "restaurant",
+        "check_date": "2023-05-12",
+        "name": "Century Lounge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6591715786,
+      "lat": -1.296921,
+      "lon": 36.7821333,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Katanazi Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8862539504,
+      "lat": -1.2905558,
+      "lon": 36.8129869,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housenumber": "30175",
+        "addr:postcode": "00100",
+        "addr:street": "Bishop Road",
+        "amenity": "restaurant",
+        "check_date": "2023-04-15",
+        "cuisine": "regional;chicken;african",
+        "name": "PHQ Canteen",
+        "opening_hours": "Mo-Fr 08:00-15:00"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8917666121,
+      "lat": -1.2894669,
+      "lon": 36.7921572,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Cloud Twenty"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9232378203,
+      "lat": -1.2943156,
+      "lon": 36.7993411,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Woodlands Lane",
+        "amenity": "restaurant",
+        "bar": "no",
+        "cuisine": "african;fish;chicken",
+        "delivery": "yes",
+        "diet:meat": "yes",
+        "diet:vegetarian": "yes",
+        "name": "Ka Dana Delicacies",
+        "opening_hours": "Mo-Su 08:00-20:00",
+        "phone": "+254758940064",
+        "start_date": "2016-01-03",
+        "takeaway": "yes",
+        "website": "https://kadana.co.ke/?utm_source=osm&utm_medium=maps&utm_campaign=osm"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9404117193,
+      "lat": -1.2774163,
+      "lon": 36.8154431,
+      "tags": {
+        "amenity": "restaurant",
+        "check_date": "2024-09-06",
+        "cuisine": "seafood",
+        "name": "Mawimbi Seafood Restaurant",
+        "payment:cash": "no",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9466537394,
+      "lat": -1.2921603,
+      "lon": 36.7800421,
+      "tags": {
+        "amenity": "restaurant",
+        "check_date": "2023-04-21",
+        "description": "Ethiopian",
+        "name": "Habesha Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9722375017,
+      "lat": -1.287507,
+      "lon": 36.7857172,
+      "tags": {
+        "addr:street": "Kayahwe Road",
+        "amenity": "restaurant",
+        "name": "Hot Pot"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9722395518,
+      "lat": -1.2908759,
+      "lon": 36.7827463,
+      "tags": {
+        "addr:street": "Galana Road",
+        "amenity": "restaurant",
+        "name": "Five Senses"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9906187617,
+      "lat": -1.2962882,
+      "lon": 36.798832,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Ain",
+        "name:ko": "\uc544\uc778 \ud55c\uad6d\ub808\uc2a4\ud1a0\ub791"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10880721206,
+      "lat": -1.2907967,
+      "lon": 36.7871196,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Glorious Eateries"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10946386224,
+      "lat": -1.2869482,
+      "lon": 36.8097197,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Argenti"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10965472707,
+      "lat": -1.2902981,
+      "lon": 36.7830125,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Daily Harvest Gardens",
+        "tourism": "hotel"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10994122586,
+      "lat": -1.2797916,
+      "lon": 36.8175913,
+      "tags": {
+        "air_conditioning": "yes",
+        "amenity": "restaurant",
+        "check_date": "2023-06-21",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Arziki",
+        "outdoor_seating": "no",
+        "payment:cash": "yes",
+        "payment:credit_cards": "yes",
+        "reservation": "yes",
+        "source": "local knowledge",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11215526639,
+      "lat": -1.271496,
+      "lon": 36.803699,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Chiromo mess"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12056913104,
+      "lat": -1.2866589,
+      "lon": 36.7954378,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housenumber": "PQ7W+55",
+        "addr:postcode": "PQ7W+55",
+        "addr:street": "Denis Pritt Road",
+        "amenity": "restaurant",
+        "diet:halal": "yes",
+        "diet:meat": "yes",
+        "diet:mediterranean": "yes",
+        "diet:pescetarian": "yes",
+        "diet:vegan": "yes",
+        "diet:vegetarian": "yes",
+        "name": "Hooyo's Kitchen & Poetry",
+        "opening_hours": "10:00-22:00",
+        "phone": "0113346878",
+        "website": "https://hooyoskitchen.com/"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12163869258,
+      "lat": -1.2811124,
+      "lon": 36.8183133,
+      "tags": {
+        "amenity": "restaurant",
+        "check_date": "2024-09-08",
+        "cuisine": "african",
+        "level": "1",
+        "name": "Ka-Akwacha",
+        "outdoor_seating": "yes",
+        "payment:cash": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "toilets": "yes",
+        "toilets:wheelchair": "no",
+        "website:menu": "https://menu.or.ke/Ka-akwacha_foods/Hangover_Kaakwacha_Foods.html",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12164911420,
+      "lat": -1.2808437,
+      "lon": 36.8175485,
+      "tags": {
+        "amenity": "restaurant",
+        "indoor_seating": "yes",
+        "internet_access": "wlan",
+        "level": "0",
+        "name": "Safari Restaurant",
+        "outdoor_seating": "no",
+        "self_service": "yes",
+        "smoking": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12180426164,
+      "lat": -1.2755073,
+      "lon": 36.8137244,
+      "tags": {
+        "amenity": "restaurant",
+        "check_date": "2024-09-10",
+        "name": "Boulevard"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13138453736,
+      "lat": -1.2825534,
+      "lon": 36.7850772,
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "indian",
+        "diet:vegan": "yes",
+        "diet:vegetarian": "yes",
+        "name": "Chowparty Kileleshwa"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13573806595,
+      "lat": -1.2990206,
+      "lon": 36.8011691,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Ngong Road",
+        "amenity": "restaurant",
+        "check_date": "2026-02-17",
+        "check_date:currency:XBT": "2026-02-17",
+        "currency:XBT": "yes",
+        "name": "Western Delicacy",
+        "note": "Access to the restaurant can be confusing because it is from Ng Road via a narrow road until you reach the end of that road. You will reach a gate that you have to pass to reach the parking area. They are not very familiar with Bitcoin payments, learning.",
+        "opening_hours": "24/7",
+        "payment:lightning": "no",
+        "payment:lightning_contactless": "no",
+        "payment:onchain": "yes",
+        "phone": "+254757285955",
+        "website": "https://westerndelicacy.com/"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13912595405,
+      "lat": -1.2919214,
+      "lon": 36.7902543,
+      "tags": {
+        "amenity": "restaurant",
+        "indoor_seating": "yes",
+        "name": "Amalayi",
+        "outdoor_seating": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13952604501,
+      "lat": -1.2933621,
+      "lon": 36.7858564,
+      "tags": {
+        "amenity": "restaurant",
+        "check_date": "2026-06-19",
+        "cuisine": "barbecue",
+        "level": "1",
+        "name": "Saffron Grill"
+      }
+    }
+  ],
+  "supermarket": [
+    {
+      "type": "node",
+      "id": 762025979,
+      "lat": -1.2816587,
+      "lon": 36.8169366,
+      "tags": {
+        "brand": "Carrefour",
+        "brand:wikidata": "Q217599",
+        "check_date": "2024-09-08",
+        "name": "Carrefour",
+        "opening_hours": "07:00-21:30",
+        "shop": "supermarket"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1419821932,
+      "lat": -1.2817574,
+      "lon": 36.8183031,
+      "tags": {
+        "name": "Nakumatt Lifestyle",
+        "opening_hours": "24/7",
+        "shop": "supermarket",
+        "website": "https://www.nakumatt.co.ke/"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1635588108,
+      "lat": -1.2932895,
+      "lon": 36.7876075,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housenumber": "Ground Floor, Yaya Centre,",
+        "addr:street": "Argwings Kodhek Road",
+        "check_date": "2023-05-11",
+        "name": "Chandarana Supermarket",
+        "shop": "supermarket"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4075659130,
+      "lat": -1.2944514,
+      "lon": 36.7872314,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Ring Road Kilimani",
+        "check_date": "2023-04-15",
+        "level": "0",
+        "name": "Foodplus Chandarana Adlife",
+        "shop": "supermarket"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5339423498,
+      "lat": -1.2704697,
+      "lon": 36.8117014,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housenumber": "72",
+        "addr:street": "Muthithi Road",
+        "name": "Fruity Fruits",
+        "shop": "supermarket"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5343809421,
+      "lat": -1.2729908,
+      "lon": 36.8189504,
+      "tags": {
+        "name": "Broadline Supermarket",
+        "opening_hours": "Mo-Su 09:00-18:00",
+        "shop": "supermarket"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414335721,
+      "lat": -1.2945013,
+      "lon": 36.7983291,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Argwings Kodhek Road",
+        "check_date": "2023-05-11",
+        "name": "Safeway Hypermarkets",
+        "shop": "supermarket"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5539620101,
+      "lat": -1.2733518,
+      "lon": 36.8175947,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Ngara Road",
+        "name": "Nilkanth General Supermarket",
+        "shop": "supermarket"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6171147716,
+      "lat": -1.2705182,
+      "lon": 36.8118184,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housenumber": "72",
+        "addr:street": "Muthithi Road",
+        "name": "Chiknik Distributors",
+        "shop": "supermarket"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8164646791,
+      "lat": -1.2824691,
+      "lon": 36.8159837,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Uhuru Highway",
+        "brand": "Naivas",
+        "brand:wikidata": "Q18379067",
+        "name": "Naivas",
+        "shop": "supermarket"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8883032995,
+      "lat": -1.2814534,
+      "lon": 36.8181534,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Monrovia Street",
+        "brand": "Naivas",
+        "brand:wikidata": "Q18379067",
+        "name": "Naivas Lifestyle",
+        "shop": "supermarket"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8901162637,
+      "lat": -1.2981566,
+      "lon": 36.7831953,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Kilimani Road",
+        "alt_name": "QuickMart Kilimani",
+        "branch": "KILIMANI",
+        "brand": "QuickMart",
+        "brand:wikidata": "Q113012659",
+        "check_date": "2023-05-11",
+        "name": "QuickMart",
+        "shop": "supermarket"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9587521823,
+      "lat": -1.2930205,
+      "lon": 36.7928528,
+      "tags": {
+        "branch": "Chaka Rd",
+        "brand": "QuickMart",
+        "brand:wikidata": "Q113012659",
+        "name": "QuickMart",
+        "shop": "supermarket"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10925121156,
+      "lat": -1.2911055,
+      "lon": 36.7882856,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Tigoni Road",
+        "brand": "Naivas",
+        "brand:wikidata": "Q18379067",
+        "name": "Naivas",
+        "opening_hours": "Mo-Su 08:00-21:00",
+        "operator": "Naivas",
+        "shop": "supermarket"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13059881904,
+      "lat": -1.2749836,
+      "lon": 36.7947583,
+      "tags": {
+        "name": "Jaza supermarket",
+        "shop": "supermarket"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13392069959,
+      "lat": -1.2950403,
+      "lon": 36.809599,
+      "tags": {
+        "brand": "Carrefour",
+        "brand:wikidata": "Q217599",
+        "name": "Carrefour",
+        "shop": "supermarket"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13952691501,
+      "lat": -1.2925654,
+      "lon": 36.7856369,
+      "tags": {
+        "check_date": "2026-06-19",
+        "name": "Naivas Food Market",
+        "shop": "supermarket"
+      }
+    }
+  ],
+  "pharmacy": [
+    {
+      "type": "node",
+      "id": 911044039,
+      "lat": -1.2944971,
+      "lon": 36.8068848,
+      "tags": {
+        "amenity": "pharmacy",
+        "name": "Upper Hill Medical Centre"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5378551736,
+      "lat": -1.2928967,
+      "lon": 36.8160717,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housenumber": "Ground Floor, Capitol Hill Towers, P. O. Box 49397, Nairobi",
+        "addr:street": "Cathedral Road",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Lords Healthcare Ltd"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5383781991,
+      "lat": -1.2897838,
+      "lon": 36.8115114,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housenumber": "Ground Flr, NSSF Building Block A, Bishop Rd, Nairobi",
+        "addr:street": "Kenyatta Avenue",
+        "amenity": "pharmacy",
+        "check_date": "2023-04-15",
+        "healthcare": "pharmacy",
+        "name": "Haltons Pharmacy"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414200513,
+      "lat": -1.2952192,
+      "lon": 36.7979745,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Argwings Kodhek Road",
+        "amenity": "pharmacy",
+        "check_date": "2023-05-11",
+        "healthcare": "pharmacy",
+        "name": "Rosegate Pharmacy"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414200519,
+      "lat": -1.2947068,
+      "lon": 36.7971086,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Argwings Kodhek Road",
+        "amenity": "pharmacy",
+        "check_date": "2023-05-12",
+        "healthcare": "pharmacy",
+        "name": "Malibu Pharmacy Ltd"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414280550,
+      "lat": -1.2929993,
+      "lon": 36.7879856,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housenumber": "Yaya Centre, Ground Floor P O 76404,",
+        "addr:street": "Argwings Kodhek Road",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Yaya Chemists Limited"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5414335722,
+      "lat": -1.2943735,
+      "lon": 36.7986474,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Woodlands Lane",
+        "amenity": "pharmacy",
+        "check_date": "2023-05-02",
+        "healthcare": "pharmacy",
+        "name": "Linkemmed Pharmacy"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5974660917,
+      "lat": -1.2772579,
+      "lon": 36.8164101,
+      "tags": {
+        "addr:housenumber": "59",
+        "addr:street": "Kijabe Street",
+        "amenity": "pharmacy",
+        "check_date": "2023-05-11",
+        "email": "seropharm@africaonline.co.ke",
+        "healthcare": "pharmacy",
+        "name": "Seropharm E.A",
+        "opening_hours": "Mo-Sa 08:00-13:00, 13:30-17:00",
+        "phone": "0721829929"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6007565090,
+      "lat": -1.2960739,
+      "lon": 36.8082268,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:housename": "5th Avenue Office Suites",
+        "addr:street": "5th Avenue Ngong",
+        "amenity": "pharmacy",
+        "name": "5th Avenue Ngong Pharmacy"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12157721102,
+      "lat": -1.2816266,
+      "lon": 36.816808,
+      "tags": {
+        "amenity": "pharmacy",
+        "check_date": "2024-09-05",
+        "healthcare": "pharmacy",
+        "name": "Pharmaplus",
+        "payment:cash": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "phone": "+254 793 560460"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12162052302,
+      "lat": -1.2854169,
+      "lon": 36.8190672,
+      "tags": {
+        "addr:street": "Kenyatta Avenue",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "GoodLife Pharmacy",
+        "outdoor_seating": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13952691701,
+      "lat": -1.2925595,
+      "lon": 36.7857564,
+      "tags": {
+        "amenity": "pharmacy",
+        "check_date": "2026-06-19",
+        "healthcare": "pharmacy",
+        "name": "Pharmaplus"
+      }
+    }
+  ],
+  "clothes": [
+    {
+      "type": "node",
+      "id": 5414280557,
+      "lat": -1.2928591,
+      "lon": 36.7877443,
+      "tags": {
+        "addr:city": "Nairobi",
+        "addr:street": "Ring Road",
+        "branch": "Home Yaya",
+        "brand": "Mr Price",
+        "brand:wikidata": "Q6929120",
+        "check_date": "2023-05-11",
+        "name": "Mr Price",
+        "shop": "clothes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10902369105,
+      "lat": -1.2747324,
+      "lon": 36.8195812,
+      "tags": {
+        "shop": "clothes"
+      }
+    }
+  ]
+}
