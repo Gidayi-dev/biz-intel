@@ -1,0 +1,15 @@
+{
+  "model": "mlp",
+  "target": "business_count (log1p stabilised, expm1 back-transform)",
+  "cv_protocol": "GroupKFold(5) grouped by location_id (same folds as the regression)",
+  "mlp_cv_mae": 9.402,
+  "mlp_cv_rmse": 27.042,
+  "glm_cv_mae": 11.37,
+  "glm_cv_rmse": 26.186,
+  "glm_model_type": "negative_binomial",
+  "glm_wins_mae": false,
+  "n_obs": 360,
+  "hidden_layer_sizes": [
+    16
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "n_labels": 34,
+  "n_locations": 11,
+  "n_categories": 10,
+  "label_counts": {
+    "underserved": 16,
+    "moderate": 10,
+    "saturated": 8
+  },
+  "accuracy": 0.441,
+  "precision_macro": 0.4,
+  "recall_macro": 0.408,
+  "f1_macro": 0.404,
+  "per_class": {
+    "moderate": {
+      "n": 10,
+      "precision": 0.1,
+      "recall": 0.1
+    },
+    "saturated": {
+      "n": 8,
+      "precision": 0.5,
+      "recall": 0.5
+    },
+    "underserved": {
+      "n": 16,
+      "precision": 0.625,
+      "recall": 0.625
+    }
+  }
+}

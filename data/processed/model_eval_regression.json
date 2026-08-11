@@ -1,0 +1,25 @@
+{
+  "model_type": "negative_binomial",
+  "alpha": 2.036748448233208,
+  "pearson_chi2_per_dof": 25.036,
+  "n_obs": 360,
+  "n_locations": 30,
+  "n_categories": 12,
+  "cv_mae": 11.37,
+  "cv_rmse": 26.186,
+  "intercept": -2.295,
+  "reference_category": "supermarket",
+  "category_rate_shifts": {
+    "clothes": -1.358,
+    "fast_food": -0.57,
+    "greengrocer": -1.921,
+    "hairdresser": -0.54,
+    "hardware": -1.392,
+    "kiosk": 0.464,
+    "laundry": -2.577,
+    "motorcycle_taxi": -23.954,
+    "pharmacy": 0.832,
+    "restaurant": 1.262,
+    "salon": -2.08
+  }
+}

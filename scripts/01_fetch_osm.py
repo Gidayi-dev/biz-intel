@@ -2,8 +2,8 @@ import requests
 import json
 import time
 
-# "https://overpass.kumi.systems/api/interpreter"
-# "https://overpass.openstreetmap.fr/api/interpreter"
+# Reference pilot endpoint (the scale-out scripts use overpass_client.py,
+# which tries overpass-api.de first, then kumi.systems, then this mirror).
 OVERPASS_URL = "https://overpass.openstreetmap.fr/api/interpreter"
 
 BBOX = (-1.30, 36.78, -1.27, 36.82)

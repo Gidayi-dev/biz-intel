@@ -1,0 +1,386 @@
+{
+  "Kawangware": {
+    "method": "bbox",
+    "bbox": [
+      -1.2984631,
+      36.731643,
+      -1.2584631,
+      36.771643
+    ],
+    "geocode_name": "Kawangware, Kawangware division, Dagoretti, Nairobi, 23318, Kenya",
+    "geocode_type": "suburb",
+    "status": "resolved",
+    "reason": "geocoded to a suburb bbox",
+    "location": "Kawangware"
+  },
+  "Waithaka": {
+    "method": "bbox",
+    "bbox": [
+      -1.3043085,
+      36.6816885,
+      -1.2586936,
+      36.7341764
+    ],
+    "geocode_name": "Waithaka division, Dagoretti, Nairobi, 53399, Kenya",
+    "geocode_type": "suburb",
+    "status": "resolved",
+    "reason": "geocoded to a suburb bbox",
+    "location": "Waithaka"
+  },
+  "Embakasi": {
+    "method": "area",
+    "area_id": 3616248854,
+    "admin_level": "6",
+    "probe_count": 1659,
+    "status": "resolved",
+    "reason": "admin boundary (admin_level=6) with 1659 mapped shop/amenity nodes",
+    "area_name": "Embakasi",
+    "location": "Embakasi"
+  },
+  "Kayole": {
+    "method": "bbox",
+    "bbox": [
+      -1.2867475,
+      36.8993623,
+      -1.2467475,
+      36.9393623
+    ],
+    "geocode_name": "Kayole, Njiru, Nairobi, 55145, Kenya",
+    "geocode_type": "suburb",
+    "status": "resolved",
+    "reason": "geocoded to a suburb bbox",
+    "location": "Kayole"
+  },
+  "Umoja": {
+    "method": "area",
+    "area_id": 3605412010,
+    "admin_level": "9",
+    "probe_count": 1,
+    "status": "suspect",
+    "reason": "area exists (admin_level=9) but contains only 1 mapped shop/amenity nodes -- boundary may be empty or not match the census location",
+    "area_name": "Umoja",
+    "location": "Umoja"
+  },
+  "Eastleigh": {
+    "method": "area",
+    "area_id": 3612713273,
+    "admin_level": "10",
+    "probe_count": 816,
+    "status": "resolved",
+    "reason": "admin boundary (admin_level=10) with 816 mapped shop/amenity nodes",
+    "area_name": "Eastleigh",
+    "location": "Eastleigh"
+  },
+  "Pumwani": {
+    "method": "bbox",
+    "bbox": [
+      -1.3017979,
+      36.8253526,
+      -1.2617979,
+      36.8653526
+    ],
+    "geocode_name": "Pumwani, Pumwani ward, Kamukunji, Nairobi, 00300, Kenya",
+    "geocode_type": "suburb",
+    "status": "resolved",
+    "reason": "geocoded to a suburb bbox",
+    "location": "Pumwani"
+  },
+  "Githurai": {
+    "method": "bbox",
+    "bbox": [
+      -1.2057131,
+      36.9139614,
+      -1.2007752,
+      36.9193694
+    ],
+    "geocode_name": "Githurai, Nairobi, Kenya",
+    "geocode_type": "suburb",
+    "status": "resolved",
+    "reason": "geocoded to a suburb bbox",
+    "location": "Githurai"
+  },
+  "Kariobangi North": {
+    "method": "bbox",
+    "bbox": [
+      -1.2631457,
+      36.8715023,
+      -1.2431457,
+      36.8915023
+    ],
+    "geocode_name": "Kariobangi North, Kariobangi, Kariobangi North ward, Kasarani, Nairobi, 00623, Kenya",
+    "geocode_type": "neighbourhood",
+    "status": "resolved",
+    "reason": "geocoded to a neighbourhood bbox",
+    "location": "Kariobangi North"
+  },
+  "Kasarani": {
+    "method": "area",
+    "area_id": 3616247557,
+    "admin_level": "6",
+    "probe_count": 1937,
+    "status": "resolved",
+    "reason": "admin boundary (admin_level=6) with 1937 mapped shop/amenity nodes",
+    "area_name": "Kasarani",
+    "location": "Kasarani"
+  },
+  "Roysambu": {
+    "method": "bbox",
+    "bbox": [
+      -1.2388396,
+      36.8667392,
+      -1.1988396,
+      36.9067392
+    ],
+    "geocode_name": "Roysambu, Roysambu division, Kasarani, Nairobi, 00608, Kenya",
+    "geocode_type": "suburb",
+    "status": "resolved",
+    "reason": "geocoded to a suburb bbox",
+    "location": "Roysambu"
+  },
+  "Kibera": {
+    "method": "bbox",
+    "bbox": [
+      -1.3313332,
+      36.7690001,
+      -1.2913332,
+      36.8090001
+    ],
+    "geocode_name": "Kibera, Lindi ward, Kibra, Nairobi, 21104, Kenya",
+    "geocode_type": "suburb",
+    "status": "resolved",
+    "reason": "geocoded to a suburb bbox",
+    "location": "Kibera"
+  },
+  "Laini Saba": {
+    "method": "bbox",
+    "bbox": [
+      -1.3153333,
+      36.792958,
+      -1.3093484,
+      36.7989644
+    ],
+    "geocode_name": "Laini Saba, Nairobi, Kenya",
+    "geocode_type": "village",
+    "status": "suspect",
+    "reason": "geocoded to a village-type bbox -- coarse match, verify against the census unit",
+    "location": "Laini Saba"
+  },
+  "Woodley": {
+    "method": "area",
+    "area_id": 3603882057,
+    "admin_level": "10",
+    "probe_count": 215,
+    "status": "resolved",
+    "reason": "admin boundary (admin_level=10) with 215 mapped shop/amenity nodes",
+    "area_name": "Woodley",
+    "location": "Woodley"
+  },
+  "Karen": {
+    "method": "bbox",
+    "bbox": [
+      -1.3483746,
+      36.6849676,
+      -1.3083746,
+      36.7249676
+    ],
+    "geocode_name": "Karen, Karen ward, Langata, Nairobi, 00505, Kenya",
+    "geocode_type": "suburb",
+    "status": "resolved",
+    "reason": "geocoded to a suburb bbox",
+    "location": "Karen"
+  },
+  "Nairobi West": {
+    "method": "bbox",
+    "bbox": [
+      -1.3287022,
+      36.8030975,
+      -1.2887022,
+      36.8430975
+    ],
+    "geocode_name": "Nairobi West, Nairobi West ward, Langata, Nairobi, 30326, Kenya",
+    "geocode_type": "suburb",
+    "status": "resolved",
+    "reason": "geocoded to a suburb bbox",
+    "location": "Nairobi West"
+  },
+  "Bahati": {
+    "method": "area",
+    "area_id": 3615969726,
+    "admin_level": "6",
+    "probe_count": 35,
+    "status": "resolved",
+    "reason": "admin boundary (admin_level=6) with 35 mapped shop/amenity nodes",
+    "area_name": "Bahati",
+    "location": "Bahati"
+  },
+  "Makadara": {
+    "method": "area",
+    "area_id": 3605712758,
+    "admin_level": "7",
+    "probe_count": 145,
+    "status": "resolved",
+    "reason": "admin boundary (admin_level=7) with 145 mapped shop/amenity nodes",
+    "area_name": "Makadara",
+    "location": "Makadara"
+  },
+  "Viwandani": {
+    "method": "bbox",
+    "bbox": [
+      -1.3169523,
+      36.8544624,
+      -1.2961692,
+      36.8893052
+    ],
+    "geocode_name": "Viwandani ward, Makadara subcounty, Nairobi, Kenya",
+    "geocode_type": "suburb",
+    "status": "resolved",
+    "reason": "geocoded to a suburb bbox",
+    "location": "Viwandani"
+  },
+  "Huruma": {
+    "method": "bbox",
+    "bbox": [
+      -1.2624493,
+      36.8640332,
+      -1.2566268,
+      36.8707535
+    ],
+    "geocode_name": "Huruma ward, Mathare, Nairobi, Kenya",
+    "geocode_type": "suburb",
+    "status": "resolved",
+    "reason": "geocoded to a suburb bbox",
+    "location": "Huruma"
+  },
+  "Mathare": {
+    "method": "area",
+    "area_id": 3616248851,
+    "admin_level": "6",
+    "probe_count": 2234,
+    "status": "resolved",
+    "reason": "admin boundary (admin_level=6) with 2234 mapped shop/amenity nodes",
+    "area_name": "Mathare",
+    "location": "Mathare"
+  },
+  "Dandora": {
+    "method": "bbox",
+    "bbox": [
+      -1.2649083,
+      36.8860802,
+      -1.2249083,
+      36.9260802
+    ],
+    "geocode_name": "Dandora, Dandora Area III ward, Njiru, Nairobi, 00623, Kenya",
+    "geocode_type": "suburb",
+    "status": "resolved",
+    "reason": "geocoded to a suburb bbox",
+    "location": "Dandora"
+  },
+  "Njiru": {
+    "method": "area",
+    "area_id": 3616248849,
+    "admin_level": "6",
+    "probe_count": 326,
+    "status": "resolved",
+    "reason": "admin boundary (admin_level=6) with 326 mapped shop/amenity nodes",
+    "area_name": "Njiru",
+    "location": "Njiru"
+  },
+  "Ruai": {
+    "method": "bbox",
+    "bbox": [
+      -1.2889967,
+      36.9715483,
+      -1.2489967,
+      37.0115483
+    ],
+    "geocode_name": "Ruai, Ruai ward, Njiru, Nairobi, 00520, Kenya",
+    "geocode_type": "suburb",
+    "status": "resolved",
+    "reason": "geocoded to a suburb bbox",
+    "location": "Ruai"
+  },
+  "CBD": {
+    "method": "bbox",
+    "bbox": [
+      -1.2952265,
+      36.8125951,
+      -1.2668262,
+      36.8445039
+    ],
+    "geocode_name": "CBD division, Starehe, Nairobi, Kenya",
+    "geocode_type": "suburb",
+    "status": "resolved",
+    "reason": "geocoded to a suburb bbox",
+    "location": "CBD"
+  },
+  "Central": {
+    "method": "bbox",
+    "bbox": [
+      -1.2952265,
+      36.8125951,
+      -1.2744212,
+      36.8412989
+    ],
+    "geocode_name": "Nairobi Central ward, Starehe, Nairobi, Kenya",
+    "geocode_type": "political",
+    "status": "resolved",
+    "reason": "manually re-resolved: Nominatim political boundary for Nairobi Central ward (Starehe); verified as the census Central location (previously matched a single amenity 'Central bar')",
+    "location": "Central"
+  },
+  "South B": {
+    "method": "bbox",
+    "bbox": [
+      -1.3341724,
+      36.8176708,
+      -1.2941724,
+      36.8576708
+    ],
+    "geocode_name": "South B, Nairobi South ward, Starehe, Nairobi, 00603, Kenya",
+    "geocode_type": "suburb",
+    "status": "resolved",
+    "reason": "geocoded to a suburb bbox",
+    "location": "South B"
+  },
+  "Highridge": {
+    "method": "bbox",
+    "bbox": [
+      -1.2756111,
+      36.7865531,
+      -1.2356111,
+      36.8265531
+    ],
+    "geocode_name": "Highridge, Highridge division, Westlands, Nairobi, 00606, Kenya",
+    "geocode_type": "suburb",
+    "status": "resolved",
+    "reason": "geocoded to a suburb bbox",
+    "location": "Highridge"
+  },
+  "Kangemi": {
+    "method": "bbox",
+    "bbox": [
+      -1.2880073,
+      36.7322966,
+      -1.2480073,
+      36.7722966
+    ],
+    "geocode_name": "Kangemi, Kangemi division, Westlands, Nairobi, 23318, Kenya",
+    "geocode_type": "suburb",
+    "status": "resolved",
+    "reason": "geocoded to a suburb bbox",
+    "location": "Kangemi"
+  },
+  "Kilimani": {
+    "method": "bbox",
+    "bbox": [
+      -1.3160146,
+      36.7617791,
+      -1.2760146,
+      36.8017791
+    ],
+    "geocode_name": "Kilimani, Kilimani division, Westlands, Nairobi, 44847, Kenya",
+    "geocode_type": "suburb",
+    "status": "resolved",
+    "reason": "geocoded to a suburb bbox",
+    "location": "Kilimani"
+  }
+}
