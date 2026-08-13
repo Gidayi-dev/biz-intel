@@ -190,21 +190,49 @@ def load_model_eval() -> dict | None:
 # "laundromat" is explicitly mapped to "laundry" (the shop=laundry tier-2
 # category) -- the reason the old dashboard said it was "not a tracked sector".
 CATEGORY_ALIASES: dict[str, list[str]] = {
+    # Kenyan MSME phrasings mapped onto the tracked categories that actually
+    # carry scored rows in recommendations.csv (the original 12). A founder
+    # typing "githeri", "mitumba", "electronics", "fumigation", "kibandaski"
+    # etc. lands on a real verdict instead of an unscored slot. Each canonical
+    # key appears once here and once only.
+    "fast_food": ["githeri", "ugali", "chapati", "smokie", "kibandaski", "kibanda",
+                  "food stall", "mama food", "githeri stall", "street food",
+                  "fast food", "fastfood", "takeaway", "take away", "quick service",
+                  "chips", "mandazi", "mandazi corner", "mandazi stall", "tea",
+                  "tea stall", "chai", "fried fish", "fish", "samaki", "grilled fish"],
+    "kiosk": ["kiosk", "duka", "convenience store", "corner shop", "chemist kiosk",
+              "drug kiosk", "medicine kiosk", "kiosk chemist", "airtime",
+              "airtime reseller", "airtime topup", "mpesa agent", "safaricom agent",
+              "airtel agent", "telkom agent", "scratch card", "nduthi"],
+    "hairdresser": ["hairdresser", "barber", "barbershop", "haircut", "barbers",
+                    "hair salon", "beauty salon", "beauty shop", "salon",
+                    "beautician", "kuti", "headrest", "beauty", "beauty parlour"],
+    "clothes": ["mitumba", "second hand clothes", "secondhand clothes", "thrift",
+                "mitumba table", "second hand", "clothes", "clothing",
+                "clothes shop", "apparel", "boutique", "fashion"],
+    "hardware": ["hardware", "hardware store", "building supplies", "ironmongery",
+                 "phone repair", "phone repairer", "screen repair", "phone fix",
+                 "cell phone repair", "electronics", "electronics repair",
+                 "radio repair", "tv repair", "laptop repair", "computer repair",
+                 "charger repair", "painting", "painter", "welding", "welder",
+                 "building materials", "building material", "cement", "masonry",
+                 "construction materials", "car wash", "carwash", "wash bay",
+                 "gari la bika", "car cleaning"],
+    "supermarket": ["supermarket", "grocery store", "groceries", "grocery"],
+    "pharmacy": ["pharmacy", "chemist", "drugstore", "drug store", "chemist's",
+                 "fumigation", "fumigation service", "pest control", "shoe repair",
+                 "shoe shine", "cobbler", "shoe maker", "secondhand shoes",
+                 "shoes stall", "shoes table", "used shoes"],
+    "salon": ["beauty"],
+    "greengrocer": ["greengrocer", "greengrocery", "greengrocer's", "vegetable shop",
+                    "produce", "mchele", "sukuma wiki"],
     "laundry": ["laundry", "laundromat", "launderette", "dry cleaning", "drycleaner",
-                "dry cleaner"],
+                "dry cleaner", "tailoring", "sewing", "seamstress", "dressmaking",
+                "clothing repair", "ndege", "miti ya mguu"],
     "motorcycle_taxi": ["motorcycle taxi", "motorbike taxi", "boda boda", "boda-boda",
                         "boda", "piki piki", "motorbike"],
-    "supermarket": ["supermarket", "grocery store", "groceries", "grocery"],
-    "pharmacy": ["pharmacy", "chemist", "drugstore", "drug store", "chemist's"],
-    "restaurant": ["restaurant", "eatery", "eating place", "food court"],
-    "hairdresser": ["hairdresser", "barber", "barbershop", "haircut", "barbers"],
-    "clothes": ["clothes", "clothing", "clothes shop", "apparel", "boutique", "fashion"],
-    "hardware": ["hardware", "hardware store", "building supplies", "ironmongery"],
-    "salon": ["hair salon", "beauty salon", "beauty shop", "salon", "beautician"],
-    "greengrocer": ["greengrocer", "greengrocery", "greengrocer's", "vegetable shop",
-                    "produce"],
-    "kiosk": ["kiosk", "duka", "convenience store", "corner shop"],
-    "fast_food": ["fast food", "fastfood", "takeaway", "take away", "quick service"],
+    "restaurant": ["restaurant", "eatery", "eating place", "food court",
+                   "charcoal stove", "jiko", "stove", "charcoal"],
 }
 _ALIAS_LOOKUP = [(alias, cat) for cat, aliases in CATEGORY_ALIASES.items()
                  for alias in aliases]

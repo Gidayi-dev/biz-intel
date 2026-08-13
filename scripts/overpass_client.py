@@ -46,21 +46,50 @@ TIMEOUT = (10, 45)
 #         flagged.
 # ---------------------------------------------------------------------------
 CATEGORIES = {
-    # tier 1 -- formal, OSM-reliable
-    "supermarket":  {"tag": 'node["shop"="supermarket"]',     "tier": 1, "financing_confound": False},
-    "pharmacy":     {"tag": 'node["amenity"="pharmacy"]',     "tier": 1, "financing_confound": False},
-    "restaurant":   {"tag": 'node["amenity"="restaurant"]',   "tier": 1, "financing_confound": False},
-    "hairdresser":  {"tag": 'node["shop"="hairdresser"]',     "tier": 1, "financing_confound": False},
-    "clothes":      {"tag": 'node["shop"="clothes"]',         "tier": 1, "financing_confound": False},
-    "hardware":     {"tag": 'node["shop"="hardware"]',        "tier": 1, "financing_confound": False},
-    # tier 2 -- informal, structurally under-mapped (floor, not true count)
-    "salon":        {"tag": 'node["shop"="beauty"]',          "tier": 2, "financing_confound": False},
-    "greengrocer":  {"tag": 'node["shop"="greengrocer"]',     "tier": 2, "financing_confound": False},
-    "kiosk":        {"tag": 'node["shop"="kiosk"]',           "tier": 2, "financing_confound": False},
-    "fast_food":    {"tag": 'node["amenity"="fast_food"]',    "tier": 2, "financing_confound": False},
-    "laundry":      {"tag": 'node["shop"="laundry"]',         "tier": 2, "financing_confound": False},
-    # financing-confound category (boda boda stage)
+    # ---------------------------------------------------------------------
+    # Kenyan MSME / micro-business taxonomy.
+    #
+    # These are the business forms that actually START in Nairobi
+    # locations and estates, with capital measured in thousands of
+    # shillings, not the formal retail categories that city-planner OSM
+    # tagging captures. Tier 2 here means "structurally under-mapped on
+    # OSM": the count we get is a FLOOR, not a true count, and every
+    # output row is flagged accordingly.
+    #
+    # Tier 1: formal / OSM-reliable (treated as roughly representative).
+    # Tier 2: informal, under-mapped (floor, not true count).
+    # financing_confound: boda-boda stage entry is driven by asset
+    #         financing rather than market gap.
+    # ---------------------------------------------------------------------
+
+    # tier 1 -- formal, OSM-reachable
+    "supermarket":     {"tag": 'node["shop"="supermarket"]',      "tier": 1, "financing_confound": False},
+    "pharmacy":        {"tag": 'node["amenity"="pharmacy"]',      "tier": 1, "financing_confound": False},
+    "restaurant":      {"tag": 'node["amenity"="restaurant"]',   "tier": 1, "financing_confound": False},
+    "hardware_store":  {"tag": 'node["shop"="hardware"]',        "tier": 1, "financing_confound": False},
+    # tier 2 -- Kenyan micro-MSME (under-mapped, floor-only)
+    "githeri_stall":   {"tag": 'node["amenity"="fast_food"]',    "tier": 2, "financing_confound": False},
+    "mandazi_corner":  {"tag": 'node["shop"="bakery"]',          "tier": 2, "financing_confound": False},
+    "mitumba_table":   {"tag": 'node["shop"="clothes"]',         "tier": 2, "financing_confound": False},
+    "phone_repair":    {"tag": 'node["repair"~"."]',             "tier": 2, "financing_confound": False},
+    "airtime_reseller":{"tag": 'node["shop"="mobile_phone"]',    "tier": 2, "financing_confound": False},
+    "chemist_kiosk":   {"tag": 'node["amenity"="pharmacy"]',     "tier": 2, "financing_confound": False},
+    "charcoal_stove":  {"tag": 'node["shop"="fuel"]',            "tier": 2, "financing_confound": False},
+    "secondhand_shoes":{"tag": 'node["shop"="shoes"]',           "tier": 2, "financing_confound": False},
+    "fried_fish":      {"tag": 'node["amenity"="fast_food"]',    "tier": 2, "financing_confound": False},
+    "tv_viewing":      {"tag": 'node["amenity"="cafe"]',         "tier": 2, "financing_confound": False},
+    "building_material_stall": {"tag": 'node["shop"="build_market"]', "tier": 2, "financing_confound": False},
+    "kiosk_corner":    {"tag": 'node["shop"="kiosk"]',           "tier": 2, "financing_confound": False},
+    # financing-confound: boda boda stage
     "motorcycle_taxi": {"tag": 'node["amenity"="motorcycle_taxi"]', "tier": 2, "financing_confound": True},
+    # backwards-compatible aliases so old saved queries / aliases still resolve
+    "salon":           {"tag": 'node["shop"="beauty"]',          "tier": 2, "financing_confound": False},
+    "greengrocer":     {"tag": 'node["shop"="greengrocer"]',     "tier": 2, "financing_confound": False},
+    "clothes":         {"tag": 'node["shop"="clothes"]',         "tier": 2, "financing_confound": False},
+    "hairdresser":     {"tag": 'node["shop"="hairdresser"]',     "tier": 2, "financing_confound": False},
+    "fast_food":       {"tag": 'node["amenity"="fast_food"]',    "tier": 2, "financing_confound": False},
+    "laundry":         {"tag": 'node["shop"="laundry"]',         "tier": 2, "financing_confound": False},
+    "hardware":        {"tag": 'node["shop"="hardware"]',        "tier": 2, "financing_confound": False},
 }
 
 # Tag used to probe whether a resolved area actually contains mapped
