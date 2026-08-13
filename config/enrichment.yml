@@ -1,0 +1,44 @@
+# Enrichment + recommender configuration.
+#
+# This file is read by scripts/20_enrich_osm.py, 21_enrich_worldpop.py,
+# 22_enrich_viirs.py, 23_merge_enrichments.py and 24_recommender_prototype.py
+# (via scripts/enrichment_common.py). It is intentionally a small, flat,
+# two-space-indented YAML subset so it can be parsed with zero hard
+# dependencies (PyYAML is used only if already installed).
+#
+# All `paths` are relative to the project root (the directory that contains
+# `config/`), and are resolved by enrichment_common.resolve_path().
+
+weights:
+  gap: 0.6     # model gap term (predicted - mapped), positive = underserved
+  pop: 0.25    # log population term
+  comp: 0.4    # competition term (subtracted)
+  viirs: 0.2   # nightlights term
+
+penalties:
+  tier2: 0.4   # subtracted from every tier-2 (informal, under-mapped) category
+  bbox: 0.3    # subtracted from every bbox-sourced location (lower fidelity)
+
+buffers:
+  near_m: 100  # "competitors within 100 m" radius
+  far_m: 500   # "competitors within 500 m" radius (the competition term)
+
+normalize: z   # z | minmax
+top_k: 5
+
+paths:
+  db: data/processed/biz_intel.db
+  osm_out: data/processed/osm_enrichment.csv
+  worldpop_out: data/processed/worldpop_enrichment.csv
+  viirs_out: data/processed/viirs_enrichment.csv
+  merge_out: data/processed/enriched_features.csv
+  recommendations_out: data/processed/recommendations.csv
+
+raster:
+  # Documented public data sources (downloaded only when rasterio/rasterstats
+  # are installed AND the machine is online). Never re-published; cached locally.
+  worldpop_url: https://data.worldpop.org/GIS/Population/Global_2000_2020/2020/KEN/ken_ppp_2020_UNadj.tif
+  worldpop_file: ken_ppp_2020_UNadj.tif
+  viirs_url: https://eogdata.mines.edu/nighttime_light/annual/v21/2020/VNL_v21_npp_2020_global_vcmslcfg_c202205302300.average_masked.dat.tif.gz
+  viirs_file: viirs_2020_avg_masked.tif
+  cache_dir: data/raw/enrichment

@@ -1,0 +1,25 @@
+# Core runtime dependencies.
+#
+# These cover the whole pipeline: the OSM fetch (requests), the cleaned-data
+# and enrichment tables (pandas/numpy), the Negative Binomial regression
+# (statsmodels + scikit-learn for the grouped CV), and the Streamlit dashboard.
+requests
+pandas
+numpy
+statsmodels
+scikit-learn
+streamlit
+
+# --- Optional: raster enrichment only (scripts 21 & 22) ---------------------
+# WorldPop population and VIIRS nightlights enrichment need these, plus an
+# internet connection to download the public rasters. When they are absent the
+# scripts degrade gracefully and write NULL cells (the recommender drops the
+# missing terms and renormalizes the remaining weights).
+#
+#   pip install rasterio rasterstats PyYAML
+#
+# PyYAML is optional too: config/enrichment.yml is parsed by a tiny built-in
+# YAML-subset parser, PyYAML is only a fast path when already installed.
+# rasterio
+# rasterstats
+# PyYAML

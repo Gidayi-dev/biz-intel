@@ -37,18 +37,31 @@ import sqlite3
 import sys
 from pathlib import Path
 
+import altair as alt
+import numpy as np
 import pandas as pd
 import streamlit as st
 
 ROOT = Path(__file__).resolve().parent
 DB_PATH = ROOT / "data" / "processed" / "biz_intel.db"
 EVAL_PATH = ROOT / "data" / "processed" / "model_eval_regression.json"
+RECOMMEND_PATH = ROOT / "data" / "processed" / "recommendations.csv"
+
+# Recommendation-engine defaults (kept in sync with config/enrichment.yml; the
+# config is read at runtime via scripts/enrichment_common.load_config and these
+# are the fallback if that file is absent/unreadable).
+DEFAULT_WEIGHTS = {"gap": 0.6, "pop": 0.25, "comp": 0.4, "viirs": 0.2}
+DEFAULT_PENALTIES = {"tier2": 0.4, "bbox": 0.3}
 
 # Single source of truth for the taxonomy lives in the pipeline scripts --
 # import it so this app can never drift from what the scripts actually fetch.
 sys.path.insert(0, str(ROOT / "scripts"))
 from overpass_client import CATEGORIES  # noqa: E402
 from summaries import summarize_category, summarize_location  # noqa: E402
+from verdicts import (  # noqa: E402
+    add_verdicts, verdict_badge, match_location, format_alternatives,
+    VERDICT_HINT, VERDICT_ORDER, VERDICT_COLORS,
+)
 
 TIER2 = {c for c, m in CATEGORIES.items() if m["tier"] == 2}
 CONFOUND = {c for c, m in CATEGORIES.items() if m["financing_confound"]}
@@ -76,7 +89,6 @@ STATUS_GOOD_BG, STATUS_GOOD_FG = "#dcf3e8", "#0d6b4a"
 
 st.set_page_config(
     page_title="Nairobi Market-Gap Intelligence",
-    page_icon="📍",
     layout="wide",
 )
 
@@ -461,8 +473,17 @@ def render_table(df: pd.DataFrame, by_location: bool) -> None:
 # Main app
 # ---------------------------------------------------------------------------
 def main() -> None:
+    tab_gap, tab_recommend = st.tabs(
+        ["Market-gap explorer", "Business idea fit"])
+    with tab_gap:
+        _render_market_gap()
+    with tab_recommend:
+        _render_recommend()
+
+
+def _render_market_gap() -> None:
     st.markdown(
-        "<div class='app-title'>📍 Nairobi Market-Gap Intelligence</div>"
+        "<div class='app-title'>Nairobi Market-Gap Intelligence</div>"
         "<div class='app-sub'>Ranked market-gap signals for the 30 mapped "
         "Nairobi census locations and the 12 tracked categories — computed "
         "from the pipeline database, every number traceable to a real column.</div>",
@@ -537,14 +558,14 @@ def main() -> None:
         _render_focused(data, model_eval, nl_loc, nl_cat, nl_cat_alias,
                         nl_loc_frag)
         st.divider()
-        _render_mode2(data, model_eval, nl_cat, highlight=nl_loc,
+        _render_mode2(data, model_eval, cat_names, nl_cat, highlight=nl_loc,
                       note=f"from your sentence ('{nl_cat_alias}')")
         return
 
     if mode1_on:
         _render_mode1(data, model_eval, loc_names, nl_loc, nl_loc_frag)
     if mode2_on:
-        _render_mode2(data, model_eval, nl_cat,
+        _render_mode2(data, model_eval, cat_names, nl_cat,
                       note=f"from your sentence ('{nl_cat_alias}')" if nl_cat else None)
 
     st.divider()
@@ -582,7 +603,7 @@ def _render_mode1(data: dict, model_eval: dict | None, loc_names: list[str],
     idx = loc_names.index(nl_loc) if nl_loc in loc_names else 0
     location = st.selectbox("Location", loc_names, index=idx, key="mode1_loc")
     if nl_loc and nl_loc_frag:
-        st.caption(f"ℹ️ Routed from your sentence ('{nl_loc_frag}').")
+        st.caption(f"Routed from your sentence ('{nl_loc_frag}').")
 
     row = data["features"][data["features"]["location_name"] == location]
     if row.empty:
@@ -612,18 +633,19 @@ def _render_mode1(data: dict, model_eval: dict | None, loc_names: list[str],
         st.markdown(f"**What the numbers say** — {summary['text']}")
 
 
-def _render_mode2(data: dict, model_eval: dict | None, nl_cat: str | None,
-                  highlight: str | None = None, note: str | None = None) -> None:
+def _render_mode2(data: dict, model_eval: dict | None, cat_names: list[str],
+                  nl_cat: str | None, highlight: str | None = None,
+                  note: str | None = None) -> None:
     st.markdown("#### Mode 2 · I have a business type")
     st.caption(
         "Pick one of the 12 tracked categories (the real Tier 1 + Tier 2 "
         "taxonomy) → ranked locations for it, most-underserved first.")
 
-    cat_idx = cat_names.index(nl_cat) if nl_cat in cat_names else 0
+    cat_idx = cat_names.index(nl_cat) if (nl_cat and nl_cat in cat_names) else 0
     category = st.selectbox("Category", cat_names, index=cat_idx, key="mode2_cat",
                             format_func=lambda c: CATEGORY_LABEL[c])
     if note:
-        st.caption(f"ℹ️ {note}")
+        st.caption(f"{note}")
 
     meta = CATEGORIES[category]
     st.caption(
@@ -645,7 +667,7 @@ def _render_mode2(data: dict, model_eval: dict | None, nl_cat: str | None,
     st.write("")
     render_table(df, by_location=False)
     if highlight:
-        st.caption(f"★ {highlight!r} is the location you named.")
+        st.caption(f"{highlight!r} is the location you named.")
 
     st.write("")
     conn = _ro_conn()
@@ -690,6 +712,444 @@ def _render_footer(model_eval: dict | None) -> None:
         "not a profitability or success prediction. Tier-2 counts are "
         "undercounts."
     )
+
+
+# ---------------------------------------------------------------------------
+# Recommendation engine
+# ---------------------------------------------------------------------------
+def _recommend_config() -> tuple[dict, dict]:
+    """Weights/penalties from config/enrichment.yml, falling back to defaults."""
+    weights = dict(DEFAULT_WEIGHTS)
+    penalties = dict(DEFAULT_PENALTIES)
+    try:
+        from enrichment_common import load_config
+        cfg = load_config()
+        weights.update({k: float(v) for k, v in (cfg.get("weights") or {}).items()})
+        penalties.update({k: float(v) for k, v in (cfg.get("penalties") or {}).items()})
+    except Exception:
+        pass
+    return weights, penalties
+
+
+@st.cache_data
+def load_recommendations() -> pd.DataFrame | None:
+    """Load recommendations.csv; None when absent/empty (never invented data)."""
+    if not RECOMMEND_PATH.exists():
+        return None
+    try:
+        df = pd.read_csv(RECOMMEND_PATH)
+    except Exception:
+        return None
+    return None if df.empty else df
+
+
+def _rescore_with_weights(rec: pd.DataFrame, weights: dict) -> pd.DataFrame:
+    """Recompute score + rank under new weights, mirroring script 24 exactly.
+
+    A NaN normalized term contributes 0; the available weights are renormalized
+    so the total weight magnitude is preserved. Penalties are weight-independent
+    and reused from the saved columns.
+    """
+    out = rec.copy()
+    total_w = sum(weights.values())
+    n_map = {"gap": "n_gap", "pop": "n_log_pop",
+             "comp": "n_competitors", "viirs": "n_viirs"}
+    term_map = {"gap": "gap_term", "pop": "pop_term",
+                "comp": "comp_term", "viirs": "viirs_term"}
+
+    row_avail = pd.Series(0.0, index=out.index)
+    for k, col in n_map.items():
+        row_avail += out[col].notna().astype(float) * weights[k]
+    scale = (total_w / row_avail).replace([np.inf, -np.inf], np.nan).fillna(0.0)
+
+    for key, col in n_map.items():
+        sign = -1.0 if key == "comp" else 1.0
+        out[term_map[key]] = sign * weights[key] * scale * out[col].fillna(0.0)
+
+    out["score"] = (out["gap_term"] + out["pop_term"] + out["comp_term"]
+                    + out["viirs_term"]
+                    - out["tier2_penalty"].fillna(0.0)
+                    - out["bbox_penalty"].fillna(0.0))
+    out["rank"] = out.groupby("location_id")["score"].rank(
+        ascending=False, method="first").astype(int)
+    return out.sort_values(["location_id", "rank"])
+
+
+def _fmt_z(v) -> str:
+    return "n/a" if pd.isna(v) else f"{v:+.2f}"
+
+
+def _fmt_num(v, digits: int = 2) -> str:
+    return "n/a" if pd.isna(v) else f"{v:,.{digits}f}"
+
+
+def _render_recommend_card(r: pd.Series) -> None:
+    tier2 = bool(int(r["tier"]) == 2)
+    fin = bool(int(r["financing_confound_flag"]))
+    flags = badge_html(tier2, fin, r["geo_method"], int(r["tier"]))
+
+    verdict = r.get("verdict", None)
+    vbadge = verdict_badge(verdict) if verdict else ""
+
+    rows = [
+        render_why_row("Model gap (underserved ↑)",
+                       f"{float(r['gap_term']):+.3f} · n_gap {_fmt_z(r['n_gap'])}",
+                       mono=True),
+        render_why_row("Population",
+                       f"{float(r['pop_term']):+.3f} · n_log_pop {_fmt_z(r['n_log_pop'])}",
+                       mono=True),
+        render_why_row("Competition (subtracts)",
+                       f"{float(r['comp_term']):+.3f} · n_competitors {_fmt_z(r['n_competitors'])}",
+                       mono=True),
+        render_why_row("Nightlights",
+                       f"{float(r['viirs_term']):+.3f} · n_viirs {_fmt_z(r['n_viirs'])}",
+                       mono=True),
+        render_why_row("Tier-2 penalty", f"−{float(r['tier2_penalty']):.2f}", mono=True),
+        render_why_row("bbox penalty", f"−{float(r['bbox_penalty']):.2f}", mono=True),
+    ]
+
+    score = float(r["score"])
+    formula = (
+        f"score = {float(r['gap_term']):+.3f} + {float(r['pop_term']):+.3f} "
+        f"+ {float(r['comp_term']):+.3f} + {float(r['viirs_term']):+.3f} "
+        f"− {float(r['tier2_penalty']):.2f} − {float(r['bbox_penalty']):.2f} "
+        f"= {score:+.3f}"
+    )
+
+    gap = r.get("gap", np.nan)
+    bc = r["business_count"]
+    pop = r["population"]
+    bc_s = f"{int(bc)}" if pd.notna(bc) else "n/a"
+    pop_s = f"{int(pop):,}" if pd.notna(pop) else "n/a"
+    comp_val = _fmt_num(r.get("competitors_500m", np.nan), 0)
+    raw_parts = [
+        f"mapped {bc_s} · predicted {_fmt_num(r['predicted_count'])} "
+        f"· gap {_fmt_z(gap)} (predicted − mapped)",
+        f"population {pop_s} · ln-pop {_fmt_num(r['log_pop'])}",
+        f"competitors ≤500 m: {comp_val}",
+        f"nightlights mean: {_fmt_num(r.get('viirs_mean', np.nan))}",
+    ]
+
+    hint = ""
+    if verdict:
+        hint = (f"<div class='why-formula' style='color:#52514e'>"
+                f"<b>What this means:</b> {VERDICT_HINT[verdict]}</div>")
+
+    st.markdown(
+        f"<div class='card'>"
+        f"<div class='card-title'>#{int(r['rank'])} · "
+        f"{r['category'].replace('_', ' ')} in {r['location_name']} "
+        f"&nbsp; {vbadge} {flags} &nbsp; "
+        f"<span style='color:#0b0b0b;font-size:15px;font-weight:700'>{score:+.3f}</span></div>"
+        f"{''.join(rows)}"
+        f"<div class='why-formula'>{formula}</div>"
+        f"<div class='why-formula'>{' · '.join(raw_parts)}</div>"
+        f"{hint}"
+        f"</div>",
+        unsafe_allow_html=True,
+    )
+    st.write("")
+
+
+def _competition_axis(rec: pd.DataFrame) -> tuple[str, str]:
+    """Return (column, human label) for the 'competition / saturation' axis.
+
+    When the OSM competitor buffer was fetched (script 20 ran online) use the
+    real `competitors_500m`; otherwise fall back to `business_count` -- the
+    mapped supply itself is an honest saturation proxy. Never fabricates the
+    missing column.
+    """
+    if "competitors_500m" in rec.columns and rec["competitors_500m"].notna().any():
+        return "competitors_500m", "competitors within 500 m (more = crowded)"
+    return "business_count", "mapped businesses here (more = crowded)"
+
+
+def _render_score_chart(rows: pd.DataFrame) -> None:
+    """Horizontal ranked bars: fit score per category, colored by verdict."""
+    data = rows.copy()
+    data["label"] = data["category"].replace("_", " ").str.title()
+    data = data.sort_values("score", ascending=True)
+    domain = VERDICT_ORDER
+    color_range = [VERDICT_COLORS[v][1] for v in domain]
+
+    bars = alt.Chart(data).mark_bar(cornerRadiusEnd=3).encode(
+        y=alt.Y("label:N", sort=None, title=None),
+        x=alt.X("score:Q", title="fit score (higher = better)"),
+        color=alt.Color("verdict:N",
+                        scale=alt.Scale(domain=domain, range=color_range),
+                        legend=alt.Legend(title=None, orient="bottom")),
+        tooltip=[
+            alt.Tooltip("label:N", title="Category"),
+            alt.Tooltip("score:Q", format="+.3f", title="Score"),
+            alt.Tooltip("verdict:N", title="Verdict"),
+            alt.Tooltip("gap:Q", format="+.2f", title="Model gap"),
+        ],
+    )
+    zero = alt.Chart(pd.DataFrame({"x": [0.0]})).mark_rule(
+        strokeDash=[4, 4], color="#898781").encode(x="x:Q")
+    chart = (bars + zero).properties(height=40 * len(data) + 48)
+    st.altair_chart(chart, width="stretch")
+
+
+def _render_gap_comp_chart(rows: pd.DataFrame, comp_col: str, comp_label: str,
+                           highlight: str | None = None) -> None:
+    """Gap-vs-competition quadrant. Sweet spot = top-left (underserved + low
+    supply). The chosen category (when given) is ringed."""
+    data = rows.copy()
+    data["label"] = data["category"].replace("_", " ").str.title()
+    data = data[data[comp_col].notna()]
+    if data.empty:
+        st.info("Not enough data to draw the gap-vs-competition chart.")
+        return
+
+    data["is_pick"] = (data["category"] == highlight) if highlight else False
+    domain = VERDICT_ORDER
+    color_range = [VERDICT_COLORS[v][1] for v in domain]
+
+    points = alt.Chart(data).mark_circle(size=220, opacity=0.85).encode(
+        x=alt.X(f"{comp_col}:Q", title=comp_label),
+        y=alt.Y("gap:Q", title="market gap (predicted − mapped; + = underserved)"),
+        color=alt.Color("verdict:N",
+                        scale=alt.Scale(domain=domain, range=color_range),
+                        legend=alt.Legend(title=None, orient="bottom")),
+        size=alt.Size("population:Q", title="population",
+                      scale=alt.Scale(range=[60, 650])),
+        tooltip=[
+            alt.Tooltip("label:N", title="Category"),
+            alt.Tooltip("verdict:N", title="Verdict"),
+            alt.Tooltip("score:Q", format="+.3f", title="Score"),
+            alt.Tooltip("gap:Q", format="+.2f", title="Model gap"),
+            alt.Tooltip(f"{comp_col}:Q", format=",", title=comp_label),
+        ],
+    )
+
+    ring = alt.Chart(data).transform_filter(
+        alt.datum.is_pick).mark_circle(size=420, filled=False, stroke="#0b0b0b",
+                                       strokeWidth=2.5).encode(
+        x=alt.X(f"{comp_col}:Q"), y=alt.Y("gap:Q"))
+
+    y0 = alt.Chart(pd.DataFrame({"y": [0.0]})).mark_rule(
+        strokeDash=[4, 4], color="#898781").encode(y="y:Q")
+    xmed = alt.Chart(pd.DataFrame({"x": [float(data[comp_col].median())]})).mark_rule(
+        strokeDash=[4, 4], color="#898781").encode(x="x:Q")
+
+    chart = (points + ring + y0 + xmed).properties(height=340)
+    st.altair_chart(chart, width="stretch")
+    st.caption(
+        "Read it: the dashed lines split the field — the horizontal line is "
+        "zero gap (above = underserved, below = oversupplied), the vertical line "
+        "is the median supply. **Top-left = the sweet spot** (underserved and "
+        "little existing competition). Top-right = underserved but crowded. "
+        "Bottom-right = oversaturated.")
+
+
+def _render_recommend() -> None:
+    st.markdown(
+        "<div class='app-title'>Business idea fit</div>"
+        "<div class='app-sub'>Starting a business in Nairobi? Tell us where you "
+        "are (or want to be) and what you're thinking — we rank what fits and "
+        "why, from real mapped supply + 2019 census data. A transparent "
+        "opportunity signal, not a profitability prediction.</div>",
+        unsafe_allow_html=True)
+    st.write("")
+
+    rec = load_recommendations()
+    if rec is None:
+        st.error(
+            "Recommendations not found (data/processed/recommendations.csv). "
+            "Run scripts 20–24 first (see RUNBOOK.md) — this tab never invents "
+            "data.")
+        return
+
+    weights, penalties = _recommend_config()
+
+    st.markdown(
+        "<div class='disclaimer'><b>Scope.</b> This is an <b>opportunity "
+        "signal</b> from free public data — OpenStreetMap mapped density, "
+        "WorldPop population, and NASA VIIRS nightlights — plus the fitted "
+        "regression's expected count. It is <b>not</b> a profitability or "
+        "success prediction. Tier-2 (informal) categories are under-mapped, so "
+        "their counts are a floor. Coverage is the 30 Nairobi census areas we "
+        "mapped — a place outside them is matched to the nearest covered area, "
+        "never invented.</div>",
+        unsafe_allow_html=True)
+
+    # -- 1 · entry mode -----------------------------------------------------
+    st.markdown("#### 1 · What do you know so far?")
+    mode = st.radio(
+        "How much do you know?",
+        ["I have no idea yet", "I have an idea"],
+        index=0, horizontal=True, key="fit_mode",
+        label_visibility="collapsed")
+    have_idea = mode == "I have an idea"
+
+    # -- 2 · location (free-text "anywhere", honest fallback) ----------------
+    st.markdown("#### 2 · Where?")
+    loc_names = sorted(rec["location_name"].dropna().unique())
+    loc_text = st.text_input(
+        "Type a place — anywhere in Nairobi, or near it",
+        placeholder="e.g. Kilimani, Ruaka, 'near Kasarani', or just a business name",
+        key="fit_loc_text")
+
+    matched = match_location(loc_text, loc_names) if loc_text.strip() else None
+    matched_name = matched["matched_name"] if matched else None
+    matched_method = matched["method"] if matched else None
+
+    if loc_text.strip():
+        if matched_name:
+            how = "exact match" if matched_method == "exact" else matched_method
+            st.caption(f"Matched to **{matched_name}** ({how}).")
+        else:
+            alts = format_alternatives(matched["alternatives"])
+            st.warning(
+                f"“{loc_text.strip()}” isn't in the 30 areas we cover, so I "
+                f"can't score it directly. Closest covered areas: {alts}. "
+                f"Pick one below — we never pretend an unknown place is a "
+                f"covered area.")
+
+    default_idx = loc_names.index(matched_name) if matched_name in loc_names else 0
+    location = st.selectbox(
+        "Covered area (30 Nairobi census locations)",
+        loc_names, index=default_idx, key="fit_loc")
+
+    # -- 3 · category (only in "I have an idea" mode) -----------------------
+    category = None
+    if have_idea:
+        st.markdown("#### 3 · What kind of business?")
+        cat_text = st.text_input(
+            "Type a business type (or pick below)",
+            placeholder="e.g. salon, boda boda, supermarket, laundry, pharmacy…",
+            key="fit_cat_text")
+        resolved_cat, alias = resolve_category(cat_text.strip()) if cat_text.strip() else (None, "")
+        cat_names = sorted(rec["category"].unique())
+        if cat_text.strip():
+            if resolved_cat:
+                st.caption(f"Matched “{alias}” → **{CATEGORY_LABEL[resolved_cat]}**.")
+            else:
+                st.caption("Couldn't match that to a tracked category — pick one below.")
+        cat_idx = cat_names.index(resolved_cat) if resolved_cat in cat_names else 0
+        category = st.selectbox(
+            "Tracked category", cat_names, index=cat_idx, key="fit_cat",
+            format_func=lambda c: CATEGORY_LABEL[c])
+
+    # -- weights (advanced, collapsed) --------------------------------------
+    with st.expander("Tune the scoring (advanced)"):
+        st.caption(
+            "Change a weight and every score re-ranks instantly. A term with no "
+            "data for a location contributes 0 and the remaining weights are "
+            "renormalized (same logic as script 24).")
+        c_gap, c_pop, c_comp, c_viirs = st.columns(4)
+        with c_gap:
+            w_gap = st.slider("Model gap", 0.0, 1.0, float(weights["gap"]), 0.05,
+                              key="w_gap")
+        with c_pop:
+            w_pop = st.slider("Population", 0.0, 1.0, float(weights["pop"]), 0.05,
+                              key="w_pop")
+        with c_comp:
+            w_comp = st.slider("Competition (subtracts)", 0.0, 1.0,
+                               float(weights["comp"]), 0.05, key="w_comp")
+        with c_viirs:
+            w_viirs = st.slider("Nightlights", 0.0, 1.0, float(weights["viirs"]),
+                                0.05, key="w_viirs")
+        weights = {"gap": w_gap, "pop": w_pop, "comp": w_comp, "viirs": w_viirs}
+
+    rescored = _rescore_with_weights(rec, weights)
+    rescored = add_verdicts(rescored)
+
+    loc_rows = rescored[rescored["location_name"] == location].copy()
+    if loc_rows.empty:
+        st.info("No ranked rows for this location.")
+        return
+
+    comp_col, comp_label = _competition_axis(rec)
+
+    st.write("")
+    if have_idea:
+        _render_idea_mode(loc_rows, category, location, comp_col, comp_label)
+    else:
+        _render_no_idea_mode(loc_rows, location, comp_col, comp_label)
+
+    st.write("")
+    _render_recommend_footer()
+
+
+def _render_no_idea_mode(loc_rows: pd.DataFrame, location: str,
+                         comp_col: str, comp_label: str) -> None:
+    top_k = st.slider("Show top categories", 1, 12, 5, key="fit_top")
+    ordered = loc_rows.sort_values("score", ascending=False)
+    rows = ordered.head(top_k)
+
+    best = ordered.iloc[0]
+    if float(best["score"]) < 0:
+        st.warning(
+            "Heads up: no category in **" + location + "** scores above zero, "
+            "so nothing looks like a clear open opportunity here — the market "
+            "appears fairly saturated across the board. The strongest entry is "
+            "listed below, but read it as “least weak,” not “open.”",
+            icon="⚠️")
+
+    st.markdown(f"##### Ranked fit for **{location}** — best first")
+    c_chart, c_quad = st.columns([1, 1.15])
+    with c_chart:
+        _render_score_chart(rows)
+    with c_quad:
+        _render_gap_comp_chart(loc_rows, comp_col, comp_label)
+
+    st.write("")
+    for _, r in rows.iterrows():
+        _render_recommend_card(r)
+
+
+def _render_idea_mode(loc_rows: pd.DataFrame, category: str | None,
+                      location: str, comp_col: str, comp_label: str) -> None:
+    if not category:
+        st.info("Pick a business type above to see how it fits here.")
+        return
+    cat_rows = loc_rows[loc_rows["category"] == category]
+    if cat_rows.empty:
+        st.info(
+            f"No scored row for {CATEGORY_LABEL[category]} in {location} — "
+            f"nothing is invented for missing data.")
+        return
+
+    r = cat_rows.iloc[0]
+    verdict = r["verdict"]
+    st.markdown(
+        f"##### {CATEGORY_LABEL[category].title()} in **{location}** "
+        f"&nbsp; {verdict_badge(verdict)}", unsafe_allow_html=True)
+    st.markdown(
+        f"<div style='font-size:14px;color:#52514e'>{VERDICT_HINT[verdict]} "
+        f"It ranks <b>#{int(r['rank'])}</b> of {len(loc_rows)} categories here."
+        f"</div>", unsafe_allow_html=True)
+    st.write("")
+    _render_recommend_card(r)
+    st.markdown("##### How it sits against the other categories here")
+    _render_gap_comp_chart(loc_rows, comp_col, comp_label, highlight=category)
+
+
+def _render_recommend_footer() -> None:
+    st.markdown("#### How the fit score is derived")
+    st.markdown(
+        "| Term | Meaning | Source |\n"
+        "|---|---|---|\n"
+        "| **n_gap** | (predicted − mapped) count, z-scored per category. Positive = the model expects more than is mapped (underserved). | `features` + `10_model_regression.py` |\n"
+        "| **n_log_pop** | ln(2019 census population), z-scored across locations. | `locations` |\n"
+        "| **n_competitors** | competitors within 500 m, z-scored per category. Subtracted — more existing supply lowers the score. | OSM (script 20) |\n"
+        "| **n_viirs** | mean nightlight radiance, z-scored across locations. Higher activity raises the score. | NASA EOG VIIRS (script 22) |\n"
+        "| **tier-2 penalty** | flat −0.40 for informal/under-mapped categories (their counts are a floor). | taxonomy |\n"
+        "| **bbox penalty** | flat −0.30 for locations sourced from a geocoded bounding box (lower fidelity). | `locations.geo_method` |\n"
+    )
+    st.markdown(
+        "**Verdict bands** (from the score): "
+        "**Strong fit** ≥ +0.25 · **Good fit** 0…+0.25 · **Weak fit** −1…0 · "
+        "**Not recommended** < −1 · **Not fit** = financing-confound override "
+        "(the gap signal is unreliable for asset-financed categories like boda boda).")
+    st.caption(
+        "WorldPop/VIIRS columns are NULL when the raster packages or data files "
+        "are unavailable (the offline case); those terms then contribute 0 and "
+        "the other weights are renormalized automatically. When the 500 m "
+        "competitor buffer is missing, the gap-vs-competition chart uses mapped "
+        "business count as the saturation proxy and says so.")
 
 
 if __name__ == "__main__":
