@@ -7,6 +7,39 @@ human-validated pilot for the approach and the spec requires not deleting
 them without explanation (see the "pilot vs pipeline" note in LIMITATIONS.md
 Section 8).*
 
+## 2026-08-11 — dashboard rebuilt to spec (glass-box, no mock data)
+
+### `creative_engine.py` — now the canonical spec dashboard
+- Rebuilt in place; the old "creative engine" (mock idea generator with random
+  seeding, prototype trend chart, invented confidence scores) is **gone**.
+- **No mock/placeholder data anywhere.** Every number traces to
+  `data/processed/biz_intel.db` (`businesses_per_1000_people`,
+  `predicted_count`, `gap_residual`, `cluster_label`).
+- **Both required output modes implemented** as real ranked lists:
+  Mode 1 location → categories, Mode 2 category → locations, sorted by the
+  model's gap/density columns.
+- **Glass-box design:** each card shows its inputs + formula
+  (population, business_count, predicted_count → gap), so no score is
+  unverifiable. Model context comes from `model_eval_regression.json`
+  (CV MAE 11.37 — "gaps smaller than the MAE sit within model noise").
+- **Tier-2 badges on every card** (`laundry` included — shop=laundry was an
+  explicit Tier-2 category); `[fin]` financing-confound flag visibly flagged
+  for `motorcycle_taxi`; `[bbox]` flagged per location.
+- **Mode 1 input validated against the `locations` table** (dropdown, no
+  arbitrary text). Mode 2 category list is the real 12-category taxonomy.
+- **Optional free-text box** parses into a (location, category) pair via
+  `CATEGORY_ALIASES` ("laundromat"→"laundry") and routes to the real lookups.
+- **Generative summary** from `scripts/summaries.py` — grounded strictly in
+  real row values, never invented.
+- **Permanent visible disclaimer:** gap/opportunity signal based on currently
+  mapped OSM data + 2019 census figures, not a profitability/success
+  prediction; Tier-2 counts are undercounts (floors).
+- "Brainstorm alternatives" section (unvalidated generic startup advice)
+  removed from the main flow.
+- `dashboard.py` (validation dashboard, 5 tabs) and `app.py` (earlier spec
+  attempt) remain as separate apps; RUNBOOK updated so `creative_engine.py`
+  is the primary "test as a user" entry.
+
 ## 2026-08-10 — trained models, dashboard, docs
 
 ### Pipeline scripts added

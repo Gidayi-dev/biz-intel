@@ -38,13 +38,34 @@ The database `data/processed/biz_intel.db` is already built. Two interfaces:
 
 ### A1. Interactive dashboard (best for "test as a user")
 
+The spec dashboard is **`creative_engine.py`**:
+
 ```powershell
-venv\Scripts\python -m streamlit run dashboard.py
+venv\Scripts\python -m streamlit run creative_engine.py
 ```
 
 
 
-Your browser opens at **[http://localhost:8501](http://localhost:8501)**. The dashboard has five tabs:
+Your browser opens at **[http://localhost:8501](http://localhost:8501)**. The dashboard
+implements the two required query modes directly against `data/processed/biz_intel.db`:
+
+| Control                | What it does                                                                    |
+| ---------------------- | ------------------------------------------------------------------------------- |
+| **Mode selector**      | "I have a location" (rank categories for a place) vs "I have a business type" (rank locations for a category) |
+| **Mode 1 — location**  | Dropdown validated against the `locations` table — arbitrary text is rejected   |
+| **Mode 2 — category**  | Category list from the real taxonomy (12 categories incl. Tier-2 `laundry`)     |
+| **Free-text box (optional)** | Parses into a (location, category) pair and routes to the real lookups      |
+| **Ranked tables**      | Sorted by computed model output (`gap_residual` / `businesses_per_1000_people`), glass-box — every score shows its inputs and formula |
+| **Summary**            | Generative, grounded strictly in the row values (never invented)               |
+| **Disclaimer**         | Permanent: gap/opportunity signal from currently-mapped OSM + 2019 census, **not** a profitability/success prediction; Tier-2 counts are floors |
+
+**`dashboard.py`** is the separate pipeline-validation dashboard (five tabs, live
+integrity checks) and is still runnable as a second app on another port:
+
+```powershell
+venv\Scripts\python -m streamlit run dashboard.py --server.port 8502
+```
+
 
 
 | Tab                 | What it's for                                                                       |
@@ -156,8 +177,8 @@ After a run, confirm:
 
 | Problem                                               | Fix                                                                                                                                          |
 | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `streamlit run` errors "streamlit: command not found" | use `venv\Scripts\python -m streamlit run dashboard.py`                                                                                      |
-| Port 8501 already in use                              | `venv\Scripts\python -m streamlit run dashboard.py --server.port 8502`                                                                       |
+| `streamlit run` errors "streamlit: command not found" | use `venv\Scripts\python -m streamlit run creative_engine.py`                                                                                 |
+| Port 8501 already in use                              | `venv\Scripts\python -m streamlit run creative_engine.py --server.port 8502`                                                                  |
 | Overpass fetch fails (HTTP 429 / 504)                 | re-run `05` — it retries; files already fetched are skipped                                                                                  |
 | A location shows all zeros                            | it may be a genuine gap, OR the OSM area/bbox is under-mapped — check the Completeness tab heatmap for an "M" (never fetched) vs a real zero |
 | Want to force re-resolution of geographies            | `venv\Scripts\python scripts\04_resolve_areas.py --force`                                                                                    |
@@ -177,7 +198,9 @@ data/processed/businesses_clean.csv          cleaned business table
 data/processed/biz_intel.db                  the SQLite database (the dashboard reads this)
 data/processed/*.log                         fetch/join/dedup logs
 RESULTS_SUMMARY.md                           generated summary report
-dashboard.py                                 the Streamlit dashboard
-scripts/01..09                               the pipeline
+creative_engine.py                           the spec dashboard (two query modes)
+dashboard.py                                 pipeline-validation dashboard (5 tabs)
+app.py                                       earlier dashboard variant (see CHANGELOG)
+scripts/01..12                               the pipeline (models: 10-12, summaries.py)
 ```
 

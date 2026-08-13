@@ -1,0 +1,37 @@
+2026-08-11 16:12:12.298 Uvicorn server started on :::8599
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8599
+  Network URL: http://192.168.100.190:8599
+  External URL: http://102.0.33.90:8599
+
+Exception in callback _ProactorBasePipeTransport._call_connection_lost()
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost()>
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+2026-08-11 16:18:11.848 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\Gidayi\Desktop\Projects\DS_Models\Business_Prediction_Model\biz-intel\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 136, in exec_func_with_error_handling
+    result = func()
+  File "C:\Users\Gidayi\Desktop\Projects\DS_Models\Business_Prediction_Model\biz-intel\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 816, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gidayi\Desktop\Projects\DS_Models\Business_Prediction_Model\biz-intel\creative_engine.py", line 696, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Gidayi\Desktop\Projects\DS_Models\Business_Prediction_Model\biz-intel\creative_engine.py", line 540, in main
+    _render_mode2(data, model_eval, nl_cat, highlight=nl_loc,
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                  note=f"from your sentence ('{nl_cat_alias}')")
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gidayi\Desktop\Projects\DS_Models\Business_Prediction_Model\biz-intel\creative_engine.py", line 622, in _render_mode2
+    cat_idx = cat_names.index(nl_cat) if nl_cat in cat_names else 0
+                                                   ^^^^^^^^^
+NameError: name 'cat_names' is not defined
